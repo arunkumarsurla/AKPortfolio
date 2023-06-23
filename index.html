@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <title>AK's Portfolio</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- aos library link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+       body {
+    margin: 0px;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    background-color: #0a192f;
+    color: #8892b0;
+    font-family: 
+'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+
+.cZslOS {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.hLTFFw {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 11;
+    padding: 0px 50px;
+    width: 100%;
+    height: 100px;
+    background-color: #0a192f;
+    backdrop-filter: blur(10px);
+    transition: all linear 0.5s;
+    filter: none !important;
+    pointer-events: auto !important;
+    user-select: auto !important;
+}
+.kFCHyX {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    color: #ccd6f6;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    counter-reset: item 0;
+    z-index: 12;
+}
+.jnUoFC p {
+    margin: 20px 0px 0px;
+    max-width: 540px;
+}
+.kFCHyX .logo {
+    color: #64ffda;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.kFCHyX .logo a {
+    color: #64ffda;
+    width: 42px;
+    height: 42px;
+    position: relative;
+    z-index: 1;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: all linear 0.5s;
+}
+@media (max-width: 1080px){
+.hOvuuP {
+    left: 20px;
+    right: auto;
+}}
+
+@media (max-width: 1080px){
+.jSIwrL {
+    left: auto;
+    right: 20px;
+}}
+.ihALZY {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.ihALZY ol {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+.ihALZY ol li {
+    margin: 0px 5px;
+    position: relative;
+    counter-increment: item 1;
+    font-size:13px;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: all linear 0.5s;
+}
+.box-animation:hover{
+    outline: none;
+    box-shadow: 3px 3px 0 0 #64ffda;
+    transform: translate(-4px, -4px);
+    transition: 0.2s;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.portfolio-logo{
+    font-family: "Roboto";
+    font-size: 35px;
+    font-weight: 700;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #64ffda;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #64ffda;
+    align-self: center;
+}
+.resume-button {
+    color: #64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    line-height: 1;
+    text-decoration: none;
+    transition: all linear 0.5s;
+    margin-left: 15px;
+    font-size: 16px;
+}
+.jnUoFC {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 0px;
+}
+.section1{
+    margin: 0px auto;
+    padding: 100px 0px;
+    max-width: 1000px;
+}
+.jnUoFC h1 {
+    margin: 0px 0px 30px 4px;
+    color:  #64ffda;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    font-size: clamp(var(--fz-sm),5vw,var(--fz-md));
+    font-weight: 400;
+}
+h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    color:  #ccd6f6;
+    line-height: 1.1;
+  }
+
+  .jnUoFC .buttons {
+    color:#64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: 16px;
+    font-family:'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    line-height: 1;
+    text-decoration: none;
+    transition: all linear 0.2s;
+    margin-top: 50px;
+    margin-right:50px;
+}
+.big-heading {
+    margin: 0;
+    font-size: clamp(40px, 8vw, 80px);
+  }
+  .hOvuuP {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    right: auto;
+    z-index: 10;
+    color: #a8b2d1;
+}
+@media (max-width: 1080px){
+.hOvuuP {
+    left: 20px;
+    right: auto;
+}}
+.dVLQAC {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: all linear 0.5s;
+}
+.dVLQAC::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: #a8b2d1;;
+}
+.dVLQAC li a {
+    padding: 10px;
+}
+.jJFfEJ {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+.jJFfEJ a {
+    margin: 20px auto;
+    padding: 10px;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    
+    letter-spacing: 0.1em;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+@media (max-width: 1080px){
+.jSIwrL {
+    left: auto;
+    right: 20px;
+}}
+.jSIwrL {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: auto;
+    right: 40px;
+    z-index: 100;
+    color:#a8b2d1;
+}
+.jJFfEJ::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color:#a8b2d1;;
+}
+.numbered-heading::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -5px;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: #233554;
+}
+.custom-font-color{
+    color:#64ffda;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+    </style>
+</head>
+
+<body style="height: 100%;">
+    <div id="root">
+        <nav class="navbar fixed-top navbar-expand-lg custom-navbar">
+                <a class="navbar-brand" href="#">
+                    <h1 class="portfolio-logo box-animation">AK</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="text-center"><i class="fas fa-bars" style="color:#64ffda"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="homeSection" id="navItem1" href="#homeSection">
+                            <span class="custom-font-color">01.</span><i class="fas fa-home-alt"></i> Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                        <a class="aboutSection" href="#aboutSection" id="navItem2"><span class="custom-font-color">02.</span><i class="fa-solid fa-user"></i>
+                            About</a>
+                        <a class="resumeSection" href="#resumeSection" id="navItem3"><span class="custom-font-color">03.</span><i class="fa-solid fa-file"></i>
+                            Resume</a>
+                        <a class="portfolioSection" href="#portfolioSection" id="navItem4"><span class="custom-font-color">04.</span><i
+                                class="fa-solid fa-sliders"></i> Portfolio</a> 
+                        <a class="contactSection" href="#contactSection" id="navItem5"><span class="custom-font-color">05.</span><i
+                                class="fa-solid fa-envelope"></i> Contact</a>
+                    </div>
+                    <div style="transition-delay: 0.2s;"><a  class="resume-button box-animation" href="" target="_blank" rel="noopener noreferrer">Resume</a></div>
+                </div>
+            </div>
+        </nav>
+        <div orientation="left" class="hOvuuP">
+            <ul class="dVLQAC">
+                <li><a href="" aria-label="GitHub" target="_blank" rel="noreferrer"><title>Twitter</title><i class="fab fa-twitter"></i></a></li>
+                <li><a href="" aria-label="GitHub" target="_blank" rel="noreferrer"><title>GitHub</title><i class="fab fa-github"></i></a></li>
+                <li><a href="" aria-label="GitHub" target="_blank" rel="noreferrer"><title>linkedin</title><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="" aria-label="GitHub" target="_blank" rel="noreferrer"><title>Instagram</title><i class="fab fa-instagram"></i></a></li>
+                <li><a href="" aria-label="GitHub" target="_blank" rel="noreferrer"><title>Whatsapp</title><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+        <div orientation="right" class="jSIwrL">
+            <div class="jJFfEJ ">
+                <a href="mailto:arunkumarsurla1@gmail.com">arunkumarsurla1@gmail.com</a>
+            </div>
+        </div>
+
+        <section class="jnUoFC section1 pt-5 pb-5 w-100 w-100" id="homeSection">
+            <div class="jnUoFC">
+                <h1>Hi, my name is</h1>
+                <h2 class="big-heading">Arun Kumar.</h2>
+                <h3 class="big-heading">I build things for the web.</h3>
+                <p>
+                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus accusamus voluptatem, facilis ullam repellat aliquam maiores fuga alias fugiat sunt nulla neque mollitia illum corporis magnam odio voluptate architecto sint!
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed vel natus iure optio, reprehenderit, inventore autem at sunt repellendus velit minus ab modi qui. Ullam, amet quos! Minima, quos!
+                </p>
+                <div style="transition-delay: 500ms;">
+                    <a class="buttons box-animation" target="_blank" rel="noreferrer">About Me</a>
+                    <a class="buttons box-animation" target="_blank" rel="noreferrer">Contact Me</a>
+                </div>
+                </div>
+                
+            </div>
+            
+        </section>
+
+        <section class="about-section pt-5 pb-5 w-100 w-100" id="aboutSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-5 order-1 order-md-2 mb-2">
+                        <div class="text-center" data-aos="fade-left">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-banner-img.png" class="about-section-img" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7 order-2 order-md-1 m-auto" >
+                        <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color">01. </span>
+                            About Me
+                        </h2>
+                        <h3 class="about-section-para">This is Arun Kumar, 23 Year old Software Engineer From Andhra
+                            Pradesh, India.</h3>
+                        <p class="description1">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, tempora. Eveniet expedita vero animi voluptates ipsa qui, recusandae quaerat, odio, mollitia ducimus ipsum veritatis saepe omnis in nihil pariatur voluptatem.
+                        </p>
+                        <p class="description1">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus, magnam distinctio asperiores eligendi aspernatur rerum error, iste omnis veniam nostrum earum! Ipsam praesentium dolore, itaque magni modi doloremque suscipit.
+                        </p>
+                        <p class="description1">
+                           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit obcaecati, eum qui dolorem autem laborum voluptatibus odit tenetur error numquam asperiores molestias molestiae dicta nostrum voluptate praesentium tempore expedita repudiandae!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section pt-5 pb-5" id="resumeSection">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color">02. </span>Resume</h2>
+                    <p class="description1">In this Section, you will know my Education details, Work Experience and My
+                        Skills to represent my Expertise.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <h3 class="resume-title">Summary</h3>
+                        <div class="resume-item pb-0">
+                            <h4>Arun Kumar</h4>
+                            <p>Full Stack Developer</p>
+                            <ul>
+                                <li><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;Andhra Pradesh, India</li>
+                                <li><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;9100506385</li>
+                                <li><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;arunkumarsurla1@gmail.com</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="resume-title">Education</h3>
+                        <div class="resume-item">
+                            <h4>Bachelor of Technology in Electrical and Electronics Engineering</h4>
+                            <h5>2018 - 2021</h5>
+                            <p>Helapuri Institute Of Technology & Science, Eluru, Andhra Pradesh, India</p>
+                            <p>B.Tech in Electrical and Electronics Engineering with an aggregate of <b>7.2</b>
+                                CGPA.</p>
+                        </div>
+                        <div class="resume-item">
+                            <h4>Bachelor of Technology in Electrical and Electronics Engineering</h4>
+                            <h5>2015 - 2018</h5>
+                            <p>Smt.B.Seetha Polytechnic, Bhimavarm, Andhra Pradesh, India</p>
+                            <p>Electrical and Electronics Engineering with an aggregate of <b>74</b>
+                                percentage.</p>
+                        </div>
+                        <div class="resume-item">
+                            <h4>State Board of Secondary Education </h4>
+                            <h5>2015</h5>
+                            <p>Rushi Valley Public School,Narsipatnam,Visakhapatnam,Andhra Pradesh, India</p>
+                            <p>Passed with an aggregate of <b>8.7</b> CGPA.</p>
+                        </div>
+
+
+                        <h3 class="resume-title">Certifications</h3>
+                        <div class="resume-item">
+                            <h4>Nxtwave Disruptive Technologies</h4>
+                            <h5>2020</h5>
+                            <p>Industry Ready Certification in Full-Stack Development through CCBP Tech 4.0 Intensive Program.
+                                </p>
+                            <p>Understanding 4.0 Technologies.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <h3 class="resume-title">Work Experience</h3>
+                        <div class="resume-item mt-2">
+                            <h4>Project Engineer</h4>
+                            <h5>SEP 2021 - Present</h5>
+                            <p>Intellect Design Arena Ltd, Delhi, India</p>
+                            <ul>
+                                <li>Working in Government E-Commerce platform also known as GeM where common user goods
+                                    and services can be procured by government buyers.
+                                    </li>
+                                <li>Worked on Production JIRA’s and helped the user for a smooth user experience. Developed and
+                                    deployed few functionality enhancements on UAT.
+                                    </li>
+                                <li>Developed and Designed UI by using frontend technologies for the GeM portal and Admin panel
+                                    modules & Worked on UI Bug fixing and improved the system performance.
+                                    </li>
+                                <li>Involved in QA support and participated in daily Stand-up meetings to discuss impediments, clarifications, and status. Used Jira to track, assign and manage work within the team.</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="resume-title">Skills</h3>
+                        <div class="skill_main" data-aos="fade-up">
+                            <div class="skill-bar mt-2">
+                                <div class="info">
+                                    <p>HTML 5</p>
+                                    <P>90%</P>
+                                </div>
+                                <div class="bar">
+                                    <span class="html"></span>
+                                </div>
+                            </div>
+                            <div class="skill-bar mt-2">
+                                <div class="info">
+                                    <p>CSS 3</p>
+                                    <P>90%</P>
+                                </div>
+                                <div class="bar">
+                                    <span class="css"></span>
+                                </div>
+                            </div>
+                            <div class="skill-bar mt-2">
+                                <div class="info">
+                                    <p>BOOTSTRAP</p>
+                                    <P>80%</P>
+                                </div>
+                                <div class="bar">
+                                    <span class="bootstrap"></span>
+                                </div>
+                            </div>
+                            <div class="skill-bar mt-2">
+                                <div class="info">
+                                    <p>JAVASCRIPT</p>
+                                    <P>80%</P>
+                                </div>
+                                <div class="bar">
+                                    <span class="js"></span>
+                                </div>
+                            </div>
+                            <div class="skill-bar mt-2">
+                                <div class="info">
+                                    <p>REACT JS</p>
+                                    <P>70%</P>
+                                </div>
+                                <div class="bar">
+                                    <span class="react"></span>
+                                </div>
+                            </div>
+                            <div class="skill-bar mt-2">
+                                <div class="info">
+                                    <p>Node JS</p>
+                                    <P>60%</P>
+                                </div>
+                                <div class="bar">
+                                    <span class="node"></span>
+                                </div>
+                            </div>
+                            <div class="skill-bar mt-2">
+                                <div class="info">
+                                    <p>Express JS</p>
+                                    <P>55%</P>
+                                </div>
+                                <div class="bar">
+                                    <span class="express"></span>
+                                </div>
+                            </div>
+                            <div class="skill-bar mt-2">
+                                <div class="info">
+                                    <p>PHP</p>
+                                    <P>65%</P>
+                                </div>
+                                <div class="bar">
+                                    <span class="mongo"></span>
+                                </div>
+                            </div>
+                            <div class="skill-bar mt-2">
+                                <div class="info">
+                                    <p>SQL</p>
+                                    <P>80%</P>
+                                </div>
+                                <div class="bar">
+                                    <span class="sql"></span>
+                                </div>
+                            </div>
+                            <div class="skill-bar mt-2">
+                                <div class="info">
+                                    <p>PYTHON</p>
+                                    <P>65%</P>
+                                </div>
+                                <div class="bar">
+                                    <span class="python"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="portfolio-section pt-5 pb-5 w-100" id="portfolioSection">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color">03. </span>Some Things I’ve Built</h2>
+                    <p class="description1">Here you can find My Projects that represent my Expertise.</p>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="shadow project-section p-3 mb-3">
+                            <img src="./assests/foodmunchpage.png" class="project-image w-100" />
+                            <h1 class="project-title">Food Munch Page</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="http://akrestaurant.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/javascript-logo.png" class="project-logo" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+                        <div class="shadow project-section p-3 mb-3">
+                            <img src="./assests/todoProjectImage.png" class="project-image w-100" />
+                            <h1 class="project-title-wiki">Todos Page</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://aktodos.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/javascript-logo.png" class="project-logo" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+                        <div class="shadow project-section p-3 mb-3">
+                            <img src="./assests/flybuypage.png" class="project-image w-100" />
+                            <h1 class="project-title-wiki">Fly Buy</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://arunecom.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/javascript-logo.png" class="project-logo" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+                        <div class="shadow project-section p-3 mb-3">
+                            <img src="./assests/wiki.png" class="project-image w-100" />
+                            <h1 class="project-title-wiki">Wikipedia Page</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://arunwikipedia.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/javascript-logo.png" class="project-logo" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="140">
+                        <div class="project-section shadow p-3 mb-3">
+                            <img src="./assests/gallerypage.png" class="project-image w-100" />
+                            <h1 class="project-title">Gallery Page</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://akgallery.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/javascript-logo.png" class="project-logo" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-section shadow p-3 mb-3">
+                            <img src="./assests/cssgradient.png" class="project-image w-100" />
+                            <h1 class="project-title">Gradient Generator</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://akgradientpage.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/javascript-logo.png" class="project-logo" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="220">
+                        <div class="project-section shadow p-3 mb-3">
+                            <img src="./assests/digitaltimer.png" class="project-image w-100" />
+                            <h1 class="project-title">Digital Timer App</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://digitaltimerappreactjs.vercel.app/" class="project-link"
+                                    target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/react-js.png" class="project-logo-react" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+                        <div class="project-section shadow p-3 mb-3">
+                            <img src="./assests/ipldashboard.png" class="project-image w-100" />
+                            <h1 class="project-title">IPL Dashboard</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://akipldashboard.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/react-js.png" class="project-logo-react" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+                        <div class="project-section shadow p-3 mb-3">
+                            <img src="./assests/techerapage.png" class="project-image w-100" />
+                            <h1 class="project-title">Technologies Page</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://aktecherapage.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/react-js.png" class="project-logo-react" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+                        <div class="project-section shadow p-3 mb-3">
+                            <img src="./assests/bookhub.png" class="project-image w-100" />
+                            <h1 class="project-title">BookHub</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://akbookhubpage.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/react-js.png" class="project-logo-react" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+                        <div class="project-section shadow p-3 mb-3">
+                            <img src="./assests/coviddashboard.png" class="project-image w-100" />
+                            <h1 class="project-title">Covid 19 Dashboard</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://akcoviddb.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/react-js.png" class="project-logo-react" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+                        <div class="project-section shadow p-3 mb-3">
+                            <img src="./assests/cryptotrackerpage.png" class="project-image w-100" />
+                            <h1 class="project-title">Crypto Tracker</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://akcrypto.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/react-js.png" class="project-logo-react" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+                        <div class="project-section shadow p-3 mb-3">
+                            <img src="./assests/appstore.png" class="project-image w-100" />
+                            <h1 class="project-title">App Store</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://appsstoreak.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/react-js.png" class="project-logo-react" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+                        <div class="project-section shadow p-3 mb-3">
+                            <img src="./assests/projectslist.png" class="project-image w-100" />
+                            <h1 class="project-title">Projects Page</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://akprojectslist.ccbp.tech/" class="project-link" target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/react-js.png" class="project-logo-react" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+                        <div class="project-section shadow p-3 mb-3">
+                            <img src="./assests/createContacts.png" class="project-image w-100" />
+                            <h1 class="project-title">Contact List App</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://contact-list-app-react-js.vercel.app/" class="project-link"
+                                    target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/react-js.png" class="project-logo-react" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+                        <div class="project-section shadow p-3 mb-3">
+                            <img src="./assests/MoneyMangerImage.png" class="project-image w-100" />
+                            <h1 class="project-title">Money Manager App</h1>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://money-manager-app-react-js.vercel.app/" class="project-link"
+                                    target="_blank">
+                                    View Project
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
+                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <img src="./assests/react-js.png" class="project-logo-react" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class=" contact-section pt-5 pb-5 w-100" id="contactSection">
+            <div class="shadow container" data-aos="fade-up" data-aos-delay="100">
+                <div class="section-title mb-5 pb-2" data-aos="fade-up">
+                    <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color">04. </span>Get In Touch</h2>
+                    <p class="description-contact">I'll be glad to answer your Questions...</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <div class="infor d-flex flex-column  align-items-stretch">
+                            <div class="address">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h4>Location:</h4>
+                                <p class="custom-font-color">Visakhapatnam, Andhra Pradesh, India, P-531116</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="fa-solid fa-envelope"></i>
+                                <h4>Email:</h4>
+                                <p class="custom-font-color">arunkumarsurla1@gmail.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="fa-solid fa-phone"></i>
+                                <h4>Call:</h4>
+                                <p class="custom-font-color">9100506385</p>
+                            </div>
+                          
+                            <iframe
+                                src="https://maps.google.com/maps?width=450&amp;height=600&amp;hl=en&amp;q=visakapatnam&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                                width="600" height="450" style="border:0; width: 100%; height: 314px;"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class=" col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <div class="box d-flex flex-column  align-items-stretch">
+                            <h2 class="mb-5">Send Message</h2>
+                            <form id="form">
+                                <span id="span"></span>
+                                <div class="inputBox">
+                                    <input type="text" name="name" id="fullname" placeholder="Enter your Full Name"
+                                        value="" />
+                                    <label for="fullname">Full Name</label>
+                                    <small>Error message</small>
+                                </div>
+                                <div class="inputBox">
+                                    <input type="text" name="email" id="email"
+                                        placeholder="Enter your valid email address" value="" />
+                                    <label for="email">Email</label>
+                                    <small>Error message</small>
+                                </div>
+                                <div class="inputBox">
+                                    <input type="text" name="phonenumber" id="phonenumber"
+                                        placeholder="Enter your phone Number" value="" />
+                                    <label for="phonenumber">Phone Number</label>
+                                    <small>Error message</small>
+                                </div>
+                                <div class="inputBox">
+                                    <textarea type="textarea" placeholder="Type your message here" name="message"
+                                        id="message" rows="4" cols="70" value=""></textarea>
+                                    <label for="message">Message</label>
+                                    <small>Error message</small>
+                                </div>
+                                <!-- <input type="submit" id="sub" value="Submit" class="text-center"/> -->
+                                <button type="submit" id="sub">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer pt-2 pb-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="footer-group">
+                            <i class="far fa-copyright copy-icon"></i>
+                            <span class="description ml-2"><span id="year"></span> by Arun Kumar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- aos data -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <!-- send email from js -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="./index.js"></script>
+    </div>
+</body>
+
+</html>
