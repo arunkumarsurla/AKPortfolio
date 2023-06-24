@@ -24,19 +24,7 @@
     <!-- aos library link -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-       body {
-    margin: 0px;
-    width: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    background-color: #0a192f;
-    color: #8892b0;
-    font-family: 
-'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
-    font-size: 20px;
-    line-height: 1.3;
-}
+      
 
 
 .cZslOS {
@@ -229,7 +217,7 @@ h1,
 }
 .big-heading {
     margin: 0;
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: 60px;
   }
   .hOvuuP {
     width: 40px;
@@ -329,12 +317,18 @@ a {
     color:#64ffda;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 }
+
+#social-logos:hover,#mail:hover{
+    text-decoration: none;
+    color: #64ffda;
+}
+
     </style>
 </head>
 
 <body style="height: 100%;">
     <div id="root">
-        <nav class="navbar fixed-top navbar-expand-lg custom-navbar">
+        <nav class="navbar fixed-top navbar-expand-lg custom-navbar" >
                 <a class="navbar-brand" href="#">
                     <h1 class="portfolio-logo box-animation">AK</h1>
                 </a>
@@ -356,38 +350,40 @@ a {
                                 class="fa-solid fa-sliders"></i> Portfolio</a> 
                         <a class="contactSection" href="#contactSection" id="navItem5"><span class="custom-font-color">05.</span><i
                                 class="fa-solid fa-envelope"></i> Contact</a>
+                               
                     </div>
-                    <div style="transition-delay: 0.2s;"><a  class="resume-button box-animation" href="" target="_blank" rel="noopener noreferrer">Resume</a></div>
+                    <div ><a  class="resume-button box-animation" id="navItem6" href="#" target="_blank">Resume</a></div>
                 </div>
             </div>
         </nav>
         <div orientation="left" class="hOvuuP">
             <ul class="dVLQAC">
-                <li><a href="" aria-label="GitHub" target="_blank" rel="noreferrer"><title>Twitter</title><i class="fab fa-twitter"></i></a></li>
-                <li><a href="" aria-label="GitHub" target="_blank" rel="noreferrer"><title>GitHub</title><i class="fab fa-github"></i></a></li>
-                <li><a href="" aria-label="GitHub" target="_blank" rel="noreferrer"><title>linkedin</title><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="" aria-label="GitHub" target="_blank" rel="noreferrer"><title>Instagram</title><i class="fab fa-instagram"></i></a></li>
-                <li><a href="" aria-label="GitHub" target="_blank" rel="noreferrer"><title>Whatsapp</title><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="" id="social-logos" aria-label="Twitter" target="_blank" ><title>Twitter</title><i class="fab fa-twitter"></i></a></li>
+                <li><a href="" id="social-logos" aria-label="GitHub" target="_blank" ><title>GitHub</title><i class="fab fa-github"></i></a></li>
+                <li><a href="" id="social-logos" aria-label="Linkedin" target="_blank" ><title>linkedin</title><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="" id="social-logos" aria-label="Instagram" target="_blank" ><title>Instagram</title><i class="fab fa-instagram"></i></a></li>
+                <li><a href="" id="social-logos" aria-label="Whatsapp" target="_blank" ><title>Whatsapp</title><i class="fab fa-whatsapp"></i></a></li>
             </ul>
         </div>
         <div orientation="right" class="jSIwrL">
             <div class="jJFfEJ ">
-                <a href="mailto:arunkumarsurla1@gmail.com">arunkumarsurla1@gmail.com</a>
+                <a id="mail" href="mailto:arunkumarsurla1@gmail.com">arunkumarsurla1@gmail.com</a>
             </div>
         </div>
 
         <section class="jnUoFC section1 pt-5 pb-5 w-100 w-100" id="homeSection">
             <div class="jnUoFC">
-                <h1>Hi, my name is</h1>
+                <div class="container">
+
+                <h1 class="mt-5">Hi, my name is</h1>
                 <h2 class="big-heading">Arun Kumar.</h2>
-                <h3 class="big-heading">I build things for the web.</h3>
+                <h3 class="big-heading">Full-Stack Software Engineer.</h3>
                 <p>
-                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus accusamus voluptatem, facilis ullam repellat aliquam maiores fuga alias fugiat sunt nulla neque mollitia illum corporis magnam odio voluptate architecto sint!
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sed vel natus iure optio, reprehenderit, inventore autem at sunt repellendus velit minus ab modi qui. Ullam, amet quos! Minima, quos!
-                </p>
+                    I’m a Full-Stack Software Engineer with a passion for creating innovative web applications. With expertise in both front-end and back-end development. Currently,I’m looking to collaborate on Future Development things to gain my skills in crafting engaging user interfaces using HTML, CSS, and JavaScript and other Frameworks.</p>
                 <div style="transition-delay: 500ms;">
-                    <a class="buttons box-animation" target="_blank" rel="noreferrer">About Me</a>
-                    <a class="buttons box-animation" target="_blank" rel="noreferrer">Contact Me</a>
+                    <a class="buttons box-animation"  href="#aboutSection" rel="noreferrer">About Me</a>
+                    <a class="buttons box-animation"  href="#contactSection" rel="noreferrer">Contact Me</a>
+                </div>
                 </div>
                 </div>
                 
@@ -407,17 +403,21 @@ a {
                         <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color">01. </span>
                             About Me
                         </h2>
-                        <h3 class="about-section-para">This is Arun Kumar, 23 Year old Software Engineer From Andhra
+                        <h3 class="about-section-para">Hello!! This is Arun Kumar, 23 Year old Software Engineer From Andhra
                             Pradesh, India.</h3>
                         <p class="description1">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, tempora. Eveniet expedita vero animi voluptates ipsa qui, recusandae quaerat, odio, mollitia ducimus ipsum veritatis saepe omnis in nihil pariatur voluptatem.
+                            I’m interested in #Technology, Science & everything in its orbit.My interest in web development started back in 2020, Having already gained a solid foundation in HTML, CSS, and JavaScript, they are adept at transforming design concepts into functional and visually appealing websites or applications.
+                        </p>
+                        <p class="description1">At present, and I’ve had the privilege of working at an <a href="https://www.intellectdesign.com/"><span class="custom-font-color">Intellect Design Arena Ltd.</span></a> Fintech Company,a huge corporation, and a Designing the Future of FinTech.</p>
+                        <p class="description1">
+                            My main focus these days is building products and leading projects in the world of web development, and want to gain more skills in this field.
                         </p>
                         <p class="description1">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus, magnam distinctio asperiores eligendi aspernatur rerum error, iste omnis veniam nostrum earum! Ipsam praesentium dolore, itaque magni modi doloremque suscipit.
-                        </p>
-                        <p class="description1">
-                           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit obcaecati, eum qui dolorem autem laborum voluptatibus odit tenetur error numquam asperiores molestias molestiae dicta nostrum voluptate praesentium tempore expedita repudiandae!
-                        </p>
+                            As a young and enthusiastic developer, I am eager to contribute my skills and continuously learn and adapt to emerging technologies in the ever-evolving world of web development.
+                        </p >
+                        <p class="description1">When I’m not at the computer, I’m usually hanging out with my frineds,I love spending time in nature, whether it's going for a hike, biking or simply taking a leisurely walk in a park. </p>
+
+                        
                     </div>
                 </div>
             </div>
