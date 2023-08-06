@@ -25,64 +25,6 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
       
-
-
-.cZslOS {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-.hLTFFw {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    position: fixed;
-    top: 0px;
-    z-index: 11;
-    padding: 0px 50px;
-    width: 100%;
-    height: 100px;
-    background-color: #0a192f;
-    backdrop-filter: blur(10px);
-    transition: all linear 0.5s;
-    filter: none !important;
-    pointer-events: auto !important;
-    user-select: auto !important;
-}
-.kFCHyX {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    color: #ccd6f6;
-    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-    counter-reset: item 0;
-    z-index: 12;
-}
-.jnUoFC p {
-    margin: 20px 0px 0px;
-    max-width: 540px;
-}
-.kFCHyX .logo {
-    color: #64ffda;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-}
-.kFCHyX .logo a {
-    color: #64ffda;
-    width: 42px;
-    height: 42px;
-    position: relative;
-    z-index: 1;
-}
 a {
     display: inline-block;
     text-decoration: none;
@@ -92,37 +34,16 @@ a {
     transition: all linear 0.5s;
 }
 @media (max-width: 1080px){
-.hOvuuP {
+.social-media-links {
     left: 20px;
     right: auto;
 }}
 
 @media (max-width: 1080px){
-.jSIwrL {
+.g-mail {
     left: auto;
     right: 20px;
 }}
-.ihALZY {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-}
-.ihALZY ol {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    padding: 0px;
-    margin: 0px;
-    list-style: none;
-}
-.ihALZY ol li {
-    margin: 0px 5px;
-    position: relative;
-    counter-increment: item 1;
-    font-size:13px;
-}
 a {
     display: inline-block;
     text-decoration: none;
@@ -158,14 +79,14 @@ li {
     background-color: transparent;
     border: 1px solid #64ffda;
     border-radius: 4px;
-    padding: 0.75rem 1rem;
+    /* padding: 0.75rem 1rem; */
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
     line-height: 1;
     text-decoration: none;
-    margin-left: 15px;
+    /* margin-left: 15px; */
     font-size: 16px;
 }
-.jnUoFC {
+.template-section {
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -181,7 +102,7 @@ li {
     padding: 100px 0px;
     max-width: 1000px;
 }
-.jnUoFC h1 {
+.template-section h1 {
     margin: 0px 0px 30px 4px;
     color:  #64ffda;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
@@ -200,7 +121,7 @@ h1,
     line-height: 1.1;
   }
 
-  .jnUoFC .buttons {
+  .template-section .buttons {
     color:#64ffda;
     background-color: transparent;
     border: 1px solid #64ffda;
@@ -218,7 +139,7 @@ h1,
     margin: 0;
     font-size: 60px;
   }
-  .hOvuuP {
+  .social-media-links {
     width: 40px;
     position: fixed;
     bottom: 0px;
@@ -228,11 +149,11 @@ h1,
     color: #a8b2d1;
 }
 @media (max-width: 1080px){
-.hOvuuP {
+.social-media-links {
     left: 20px;
     right: auto;
 }}
-.dVLQAC {
+.social-media-sec {
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
@@ -253,7 +174,7 @@ a {
     position: relative;
     transition: all linear 0.5s;
 }
-.dVLQAC::after {
+.social-media-sec::after {
     content: "";
     display: block;
     width: 1px;
@@ -261,17 +182,17 @@ a {
     margin: 0px auto;
     background-color: #a8b2d1;;
 }
-.dVLQAC li a {
+.social-media-sec li a {
     padding: 10px;
 }
-.jJFfEJ {
+.g-mail-sec {
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
     position: relative;
 }
-.jJFfEJ a {
+.g-mail-sec a {
     margin: 20px auto;
     padding: 10px;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
@@ -281,11 +202,11 @@ a {
     writing-mode: vertical-rl;
 }
 @media (max-width: 1080px){
-.jSIwrL {
+.g-mail {
     left: auto;
     right: 20px;
 }}
-.jSIwrL {
+.g-mail {
     width: 40px;
     position: fixed;
     bottom: 0px;
@@ -294,7 +215,7 @@ a {
     z-index: 100;
     color:#a8b2d1;
 }
-.jJFfEJ::after {
+.g-mail-sec::after {
     content: "";
     display: block;
     width: 1px;
@@ -322,11 +243,11 @@ a {
     color: #64ffda;
 }
 @media only screen and (max-width: 600px) {
-  .hOvuuP {
+  .social-media-links {
     display: none;
 }}
 @media only screen and (max-width: 600px) {
-  .jSIwrL {
+  .g-mail {
     display: none;
 }}
     </style>
@@ -358,12 +279,12 @@ a {
                                 class="fa-solid fa-envelope"></i> Contact</a>
                                
                     </div>
-                    <div ><a  class="resume-button box-animation" id="navItem6" href="./assests/A_K_Resume_2023.pdf" target="_blank">Resume</a></div>
+                    <div class="box-animation resume-button"><a id="navItem6" href="./assests/A_K_Resume_2023.pdf" target="_blank" download>Resume <i class="fa fa-download"></i></a></div>
                 </div>
             </div>
         </nav>
-        <div orientation="left" class="hOvuuP">
-            <ul class="dVLQAC">
+        <div orientation="left" class="social-media-links">
+            <ul class="social-media-sec">
                 <li><a href="https://github.com/arunkumarsurla" id="social-logos" aria-label="GitHub" target="_blank" ><title>GitHub</title><i class="fab fa-github"></i></a></li>
                 <li><a href="https://twitter.com/arunkumar-surla" id="social-logos" aria-label="Twitter" target="_blank" ><title>Twitter</title><i class="fab fa-twitter"></i></a></li>
                 <li><a href="https://linkedin.com/in/arunkumar-surla" id="social-logos" aria-label="Linkedin" target="_blank" ><title>linkedin</title><i class="fab fa-linkedin-in"></i></a></li>
@@ -371,14 +292,14 @@ a {
                 <li><a href="https://api.whatsapp.com/send/?phone=919100506385&text&type=phone_number&app_absent=0" id="social-logos" aria-label="Whatsapp" target="_blank" ><title>Whatsapp</title><i class="fab fa-whatsapp"></i></a></li>
             </ul>
         </div>
-        <div orientation="right" class="jSIwrL">
-            <div class="jJFfEJ ">
+        <div orientation="right" class="g-mail">
+            <div class="g-mail-sec ">
                 <a id="mail" href="mailto:arunkumarsurla1@gmail.com">arunkumarsurla1@gmail.com</a>
             </div>
         </div>
 
-        <section class="jnUoFC section1 pt-5 pb-5 w-100 w-100" id="homeSection">
-            <div class="jnUoFC">
+        <section class="template-section section1 pt-5 pb-5 w-100 w-100" id="homeSection">
+            <div class="template-section">
                 <div class="container">
 
                 <h1 class="mt-5">Hi, my name is</h1>
