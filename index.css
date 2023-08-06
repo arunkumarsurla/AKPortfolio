@@ -106,7 +106,6 @@ body {
     .Home-section {
         background-image: url("./assests/backgroundHome.jpg");
         height: 80vh;
-        /* background-size: cover; */
         opacity: 0.9;
     }
 
@@ -260,9 +259,6 @@ Resume
     list-style-type: none;
 }
 
-/* .resume-item:last-child {
-    padding-bottom: 0;
-} */
 
 .resume-item::before, .skill_main:before{
     content: "";
