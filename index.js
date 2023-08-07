@@ -140,11 +140,11 @@ form.addEventListener('submit', e =>{
 
         Email.send({
             // Host : "smtp.elasticemail.com",
-            // Username : "you@ak.com",
-            // Password : "3EBC2823F0817FF5DADE284E19B45DE3399B",
-            SecureToken:"e81eb7b5-50b0-427b-8ad8-384bbf9f97f0",
+            // Username : "ak@you.com",
+            // Password : "C2400B7D3754D925056CA850/53C2BEAA6A9",
+            SecureToken:"5a053d29-a7ca-43e8-92ad-77405e12e922",
             To : 'arunkumarsurla1@gmail.com',
-            From : "you@ak.com",
+            From : "ak@you.com",
             Subject : sub,
             Body : body
         }).then(
