@@ -19,10 +19,10 @@
     <title>AK's Portfolio</title>
     <!-- font awesome -->
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./css/all.css">
-    <link rel="stylesheet" href="./css/all.min.css">
+    
     <!-- aos library link -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       
 a {
@@ -54,7 +54,7 @@ a {
 }
 .box-animation:hover{
     outline: none;
-    box-shadow: 3px 3px 0 0 #64ffda;
+    box-shadow: 3px 3px 0 0 #ff4533;
     transform: translate(-4px, -4px);
     transition: 0.2s;
 }
@@ -68,16 +68,15 @@ li {
     font-weight: 700;
     border-style: solid;
     border-width: 2px;
-    border-color: #64ffda;
+    border-color: #FFFFFF;
     padding-left: 10px;
     padding-right: 10px;
-    color: #64ffda;
+    color: #FFFFFF;
     align-self: center;
 }
 .resume-button {
-    color: #64ffda;
+    color: #ff4533;
     background-color: transparent;
-    border: 1px solid #64ffda;
     border-radius: 4px;
     /* padding: 0.75rem 1rem; */
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
@@ -96,6 +95,8 @@ li {
     min-height: 100vh;
     height: 100vh;
     padding: 0px;
+    text-align: center;
+    z-index:1;
 }
 .section1{
     margin: 0px auto;
@@ -104,9 +105,8 @@ li {
 }
 .template-section h1 {
     margin: 0px 0px 30px 4px;
-    color:  #64ffda;
+    color:  #ff4533;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-    font-size: clamp(var(--fz-sm),5vw,var(--fz-md));
     font-weight: 400;
 }
 h1,
@@ -117,15 +117,15 @@ h1,
   h6 {
     margin: 0 0 10px 0;
     font-weight: 600;
-    color:  #ccd6f6;
+    color:  #ffffff;
     line-height: 1.1;
   }
 
   .template-section .buttons {
-    color:#64ffda;
+    color:#ff4533;
     background-color: transparent;
-    border: 1px solid #64ffda;
-    border-radius: 4px;
+    border: 2px solid  #ff4533;
+    border-radius: 8px;
     padding: 1.25rem 1.75rem;
     font-size: 16px;
     font-family:'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
@@ -139,6 +139,13 @@ h1,
     margin: 0;
     font-size: 60px;
   }
+  .custom-name{
+    background: linear-gradient(to right, red, #ff4533);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(40px, 8vw, 80px);
+
+  }
   .social-media-links {
     width: 40px;
     position: fixed;
@@ -146,7 +153,7 @@ h1,
     left: 40px;
     right: auto;
     z-index: 10;
-    color: #a8b2d1;
+    color: #FFFFFF;
 }
 @media (max-width: 1080px){
 .social-media-links {
@@ -180,7 +187,7 @@ a {
     width: 1px;
     height: 90px;
     margin: 0px auto;
-    background-color: #a8b2d1;;
+    background-color: #FFFFFF;
 }
 .social-media-sec li a {
     padding: 10px;
@@ -213,7 +220,7 @@ a {
     left: auto;
     right: 40px;
     z-index: 100;
-    color:#a8b2d1;
+    color:#FFFFFF;
 }
 .g-mail-sec::after {
     content: "";
@@ -221,7 +228,7 @@ a {
     width: 1px;
     height: 90px;
     margin: 0px auto;
-    background-color:#a8b2d1;;
+    background-color:#FFFFFF;
 }
 .numbered-heading::after {
     content: "";
@@ -231,16 +238,16 @@ a {
     width: 300px;
     height: 1px;
     margin-left: 20px;
-    background-color: #233554;
+    background-color: #ff4533;
 }
 .custom-font-color{
-    color:#64ffda;
+    color:#ff4533;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 }
 
 #social-logos:hover,#mail:hover{
     text-decoration: none;
-    color: #64ffda;
+    color: #ff4533;
 }
 @media only screen and (max-width: 600px) {
   .social-media-links {
@@ -250,7 +257,7 @@ a {
   .g-mail {
     display: none;
 }}
-@media (max-width: 799px) {
+@media (max-width: 798px) {
   .template-section {
     width: 100%;
     height: 100%;
@@ -265,8 +272,129 @@ a {
 }
 .template-section p {
     margin: 20px 0px 0px;
-    max-width: 540px;
 }
+
+.nav-line{
+    background-color: #ff4533;
+    width: 2px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.bg-line_decorators {
+    width: 100%;
+    height: 100%;
+    max-width: 85rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+.vertical-line-global {
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+.vertical-line-wrapper {
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    max-width: 85rem;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.bg-line-line-global {
+    width: 2px;
+    height: 100%;
+    background-color: #1a1a1a;
+    position: absolute;
+    z-index: 1;
+}
+.bg-line-line-global.is-first {
+    left: 0%;
+}
+.bg-line-line-global.is-second {
+    left: 25%;
+}
+.bg-line-line-global.is-third {
+    left: 50%;
+    z-index: -1;
+}
+.bg-line-line-global.is-fourth {
+    left: 75%;
+}
+.bg-line-line-global.is-fifth {
+    left: 100%;
+}
+.vertical-line.is-1 {
+    height: 10rem;
+    top: 17%;
+    left: 0%;
+}
+.vertical-line.is-2 {
+    height: 8rem;
+    top: 79%;
+    left: 25%;
+}
+.vertical-line.is-3 {
+    height: 5rem;
+    top: 15%;
+    left: 50%;
+}
+.vertical-line.is-4 {
+    height:8rem;
+    top: 79%;
+    left: 75%;
+}
+.vertical-line.is-5 {
+    height: 10rem;
+    top: 17%;
+    left: 100%;
+}
+.vertical-line.is-6 {
+    height:20rem;
+    top:185%;
+    left: 75%;
+}
+.vertical-line.is-7 {
+    height: 35rem;
+    top: 455%;
+    left: 0%;
+}
+.vertical-line.is-8 {
+    height:20rem;
+    top: 650%;
+    left: 75%;
+}
+.vertical-line.is-9 {
+    height: 20rem;
+    top: 700%;
+    left: 25%;
+}
+.vertical-line.is-10 {
+    height: 43rem;
+    top: 500%;
+    left: 100%;
+}
+.vertical-line {
+    width: 2px;
+    background-color:#ff4533;
+    position: absolute;
+}
+@media only screen and (max-width: 768px) {
+    .bg-line_decorators{
+       display: none;
+    }
+}
+
+
+
     </style>
 </head>
 
@@ -274,41 +402,51 @@ a {
     <div id="root">
         <nav class="navbar fixed-top navbar-expand-lg custom-navbar" >
                 <a class="navbar-brand" href="#">
-                    <h1 class="portfolio-logo box-animation">AK</h1>
+                    <img src="/ak_2.jpg" class="ak_logo_img" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="text-center"><i class="fas fa-bars" style="color:#64ffda"></i></span>
+                    <span class="text-center"><i class="fas fa-bars" style="color:#ff4533"></i></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ml-auto">
                           <div>
-<marquee><p style="color:red"><b>Oops..! Page is temporarily unavailable or offline for updates, maintenance, or repairs</b></p></marquee>
+
 </div>
                         <a class="homeSection" id="navItem1" href="#homeSection">
-                            <span class="custom-font-color">01.</span><i class="fas fa-home-alt"></i> Home
+                            <i class="fas fa-home-alt"></i> Home
                             <span class="sr-only">(current)</span>
-                        </a>
-                        <a class="aboutSection" href="#aboutSection" id="navItem2"><span class="custom-font-color">02.</span><i class="fa-solid fa-user"></i>
-                            About</a>
-                        <a class="resumeSection" href="#resumeSection" id="navItem3"><span class="custom-font-color">03.</span><i class="fa-solid fa-file"></i>
-                            Resume</a>
-                        <a class="portfolioSection" href="#portfolioSection" id="navItem4"><span class="custom-font-color">04.</span><i
-                                class="fa-solid fa-sliders"></i> Portfolio</a> 
-                        <a class="contactSection" href="#contactSection" id="navItem5"><span class="custom-font-color">05.</span><i
-                                class="fa-solid fa-envelope"></i> Contact</a>
+                        </a><div class="nav-line"></div>
+                        <a class="aboutSection" href="#aboutSection" id="navItem2"><i class="fa-solid fa-user"></i>
+                            About</a><div class="nav-line"></div>
+                        <a class="resumeSection" href="#resumeSection" id="navItem3"><i class="fa-solid fa-file"></i>
+                            Resume</a><div class="nav-line"></div>
+                        <a class="portfolioSection" href="#portfolioSection" id="navItem4"><i
+                                class="fa-solid fa-sliders"></i> Portfolio</a> <div class="nav-line"></div>
+                        <a class="contactSection" href="#contactSection" id="navItem5"><i
+                                class="fa-solid fa-envelope"></i> Contact</a><div class="nav-line"></div>
                                
                     </div>
-                    <div class="box-animation resume-button"><a id="navItem6" href="./assests/A_K_Resume_2023.pdf" target="_blank" download>Resume <i class="fa fa-download"></i></a></div>
+                    <div class="resume-button"><a id="navItem6" href="./assests/A_K_Resume_2023.pdf" target="_blank" download>Resume <i class="fa fa-download"></i></a></div>
                 </div>
             </div>
         </nav>
+        
+        <div class="vertical-line-global">
+            <div class="vertical-line-wrapper">
+                <div class="bg-line-line-global is-first"></div>
+                <div class="bg-line-line-global is-second"></div>
+                <div class="bg-line-line-global is-third"></div>
+                <div class="bg-line-line-global is-fourth"></div>
+                <div class="bg-line-line-global is-fifth"></div>
+            </div>
+        </div>
         <div orientation="left" class="social-media-links">
             <ul class="social-media-sec">
                 <li><a href="https://github.com/arunkumarsurla" id="social-logos" aria-label="GitHub" target="_blank" ><title>GitHub</title><i class="fab fa-github"></i></a></li>
-                <li><a href="https://twitter.com/arunkumar-surla" id="social-logos" aria-label="Twitter" target="_blank" ><title>Twitter</title><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://codepen.io/arunkumarsurla" id="social-logos" aria-label="Codepen" target="_blank" ><title>Codepen</title><i class="fab fa-codepen"></i></a></li>
+                <li><a href="https://twitter.com/arunkumar-surla" id="social-logos" aria-label="Twitter" target="_blank" ><title>Twitter</title><i class="fa-brands fa-x-twitter"></i></a></li>
                 <li><a href="https://linkedin.com/in/arunkumar-surla" id="social-logos" aria-label="Linkedin" target="_blank" ><title>linkedin</title><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://instagram.com/arunkumar_____ak" id="social-logos" aria-label="Instagram" target="_blank" ><title>Instagram</title><i class="fab fa-instagram"></i></a></li>
                 <li><a href="https://api.whatsapp.com/send/?phone=919100506385&text&type=phone_number&app_absent=0" id="social-logos" aria-label="Whatsapp" target="_blank" ><title>Whatsapp</title><i class="fab fa-whatsapp"></i></a></li>
             </ul>
         </div>
@@ -322,12 +460,14 @@ a {
             <div class="template-section">
                 <div class="container">
 
-                <h1 class="mt-5">Hi, my name is</h1>
-                <h2 class="big-heading">Arun Kumar.</h2>
-                <h3 class="big-heading" style="color:#8892b0">Front-End Software Engineer.</h3>
+                <h1 class="mt-5" style="color:#ffffff; font-size: x-large;">Hi, my name is</h1>
+                <h2 class="big-heading custom-name">Arun Kumar.</h2>
+                <h3 class="big-heading" style="color:#FFFFFF">Front-End Software Engineer.</h3>
+
+               
                 
                 <p>
-                    I’m a Software Engineer with a passion for creating innovative web applications. With expertise in both front-end and back-end development. Currently,I’m looking to collaborate on Future Development things to gain my skills in crafting engaging user interfaces using HTML, CSS, and JavaScript and other Frameworks & Libraries.</p>
+                    As a Software Engineer, I'm passionate about developing cutting-edge web applications. With expertise in both front-end and back-end development, I'm eager to join collaborative projects that drive innovation. My primary goal is to further refine my skills in creating captivating user interfaces using HTML, CSS, JavaScript, and a range of frameworks and libraries.</p>
                 <div style="transition-delay: 500ms;">
                     <a class="buttons box-animation"  href="#aboutSection" rel="noreferrer">About Me</a>
                     <a class="buttons box-animation"  href="#contactSection" rel="noreferrer">Contact Me</a>
@@ -343,41 +483,54 @@ a {
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-5 order-1 order-md-2 mb-2">
-                        <div class="text-center" data-aos="fade-left">
-                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-banner-img.png" class="about-section-img" />
+                        <div class="text-center" data-aos="fade-up">
+                            <img src="/ak_2.jpg" class="about-section-img" />
                         </div>
                     </div>
                     <div class="col-12 col-md-7 order-2 order-md-1 m-auto" >
                         <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color">01. </span>
                             About Me
                         </h2>
-                        <h3 class="about-section-para">Hello!! This is Arun Kumar, 23 Year old Software Engineer From Andhra
-                            Pradesh, India.</h3>
+                        <h3 class="about-section-para">Hey there! I'm Arun Kumar, a 23-year-old Software Engineer hailing from Andhra Pradesh, India. My passions revolve around #Technology, Science, and all things related.</h3>
                         <p class="description1">
-                            I’m interested in #Technology, Science & everything in its orbit.My interest in web development started back in 2020, Having already gained a solid foundation in HTML, CSS, and JavaScript, they are adept at transforming design concepts into functional and visually appealing websites or applications.
+                            My journey into web development commenced in 2020, and since then, I've honed my expertise in HTML, CSS, and JavaScript, proficiently translating design concepts into functional and visually captivating websites and applications.
                         </p>
-                        <p class="description1">At present, and I’ve had the privilege of working at an <a href="https://www.intellectdesign.com/"><span class="custom-font-color">Intellect Design Arena Ltd.</span></a> Fintech Company,a huge corporation, and a Designing the Future of FinTech.</p>
+                        <p class="description1">Presently, I'm privileged to be part of <a target="_blank" href="https://www.intellectdesign.com/"><span class="custom-font-color">Intellect Design Arena Ltd.</span></a>, a prominent Fintech company, where I contribute to shaping the future of financial technology on a grand scale.</p>
                         <p class="description1">
-                            My main focus these days is building products and leading projects in the world of web development, and want to gain more skills in this field.
+                            My primary focus revolves around crafting products and spearheading projects within the realm of web development, with an insatiable appetite to acquire further skills in this domain. 
                         </p>
                         <p class="description1">
                             As a young and enthusiastic developer, I am eager to contribute my skills and continuously learn and adapt to emerging technologies in the ever-evolving world of web development.
                         </p >
-                        <p class="description1">When I’m not at the computer, I’m usually hanging out with my friends,I love spending time in nature, whether it's going for a hike, biking or simply taking a leisurely walk in a park. </p>
+                        <p class="description1">Outside of coding, you'll find me enjoying quality time with friends or immersing myself in nature through activities like hiking, biking, or leisurely walks in the park. </p>
 
                         
                     </div>
                 </div>
             </div>
         </section>
+        <div class="bg-line_decorators">
+            <div class="vertical-line is-1"></div>
+            <div class="vertical-line is-2"></div>
+            <div class="vertical-line is-3"></div>
+            <div class="vertical-line is-4"></div>
+            <div class="vertical-line is-5"></div>
+            <div class="vertical-line is-6"></div>
+            <div class="vertical-line is-7"></div>
+            <div class="vertical-line is-8"></div>
+            <div class="vertical-line is-9"></div>
+            <div class="vertical-line is-10"></div>
+
+            
+
+        </div>
 
         <section class="resume-section pt-5 pb-5" id="resumeSection">
             <div class="container">
 
                 <div class="section-title" data-aos="fade-up">
                     <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color">02. </span>Resume</h2>
-                    <p class="description1">In this Section, you will know my Education details, Work Experience and My
-                        Skills to represent my Expertise.</p>
+                    <p class="description1">In this section, you'll find information about my educational background, professional experience, and the skills that demonstrate my expertise.</p>
                 </div>
                 <div class="row">
                     <div class="col-lg-6" data-aos="fade-up">
@@ -386,9 +539,9 @@ a {
                             <h4>Arun Kumar</h4>
                             <p>Front-End Developer</p>
                             <ul>
-                                <li><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;Andhra Pradesh, India</li>
-                                <li><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;9100506385</li>
-                                <li><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;arunkumarsurla1@gmail.com</li>
+                                <li><i class="fa-solid fa-location-dot"></i>  Andhra Pradesh, India</li>
+                                <li><i class="fa-solid fa-phone"></i>  9100506385</li>
+                                <li><i class="fa-solid fa-envelope"></i>  arunkumarsurla1@gmail.com</li>
                             </ul>
                         </div>
 
@@ -550,6 +703,8 @@ a {
                     <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color">03. </span>Some Things I’ve Built</h2>
                     <p class="description1">Here you can find My Projects that represent my Expertise.</p>
                 </div>
+                
+
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                         <div class="shadow project-section p-3 mb-3">
@@ -559,7 +714,7 @@ a {
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -571,12 +726,12 @@ a {
                     <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
                         <div class="shadow project-section p-3 mb-3">
                             <img src="./assests/todoProjectImage.png" class="project-image w-100" />
-                            <h1 class="project-title-wiki">Todos Page</h1>
+                            <h1 class="project-title">Todos Page</h1>
                             <div class="d-flex justify-content-between">
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -589,12 +744,12 @@ a {
                     <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
                         <div class="shadow project-section p-3 mb-3">
                             <img src="./assests/flybuypage.png" class="project-image w-100" />
-                            <h1 class="project-title-wiki">Fly Buy</h1>
+                            <h1 class="project-title">Fly Buy</h1>
                             <div class="d-flex justify-content-between">
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -607,12 +762,12 @@ a {
                     <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
                         <div class="shadow project-section p-3 mb-3">
                             <img src="./assests/wiki.png" class="project-image w-100" />
-                            <h1 class="project-title-wiki">Wikipedia Page</h1>
+                            <h1 class="project-title">Wikipedia Page</h1>
                             <div class="d-flex justify-content-between">
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -630,7 +785,7 @@ a {
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -648,7 +803,7 @@ a {
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -666,7 +821,7 @@ a {
                                     target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -683,7 +838,7 @@ a {
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -700,7 +855,7 @@ a {
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -717,7 +872,7 @@ a {
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -734,7 +889,7 @@ a {
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -751,7 +906,7 @@ a {
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -768,7 +923,7 @@ a {
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -785,7 +940,7 @@ a {
                                 <a href="#" class="project-link" target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -804,7 +959,7 @@ a {
                                     target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -822,7 +977,7 @@ a {
                                     target="_blank">
                                     View Project
                                     <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="#64ffda" xmlns="http://www.w3.org/2000/svg">
+                                        fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
                                     </svg>
@@ -839,9 +994,9 @@ a {
             <div class="shadow container" data-aos="fade-up" data-aos-delay="100">
                 <div class="section-title mb-5 pb-2" data-aos="fade-up">
                     <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color">04. </span>Get In Touch</h2>
-                    <p class="description-contact">I'll be glad to answer your Questions...</p>
+                    <p class="description-contact">I'd be happy to respond to your inquiries...</p>
                 </div>
-                <div class="row">
+                <div class="row" style="justify-content: center;">
                     <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
                         <div class="infor d-flex flex-column  align-items-stretch">
                             <div class="address">
@@ -868,7 +1023,7 @@ a {
                                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
-                    <div class=" col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <!-- <div class=" col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
                         <div class="box d-flex flex-column  align-items-stretch">
                             <h2 class="mb-5">Send Message</h2>
                             <form id="form">
@@ -897,11 +1052,11 @@ a {
                                     <label for="message">Message</label>
                                     <small>Error message</small>
                                 </div>
-                                <!-- <input type="submit" id="sub" value="Submit" class="text-center"/> -->
+                                 <input type="submit" id="sub" value="Submit" class="text-center"/> 
                                 <button type="submit" id="sub">Send</button>
                             </form>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -912,7 +1067,7 @@ a {
                     <div class="col-12 text-center">
                         <div class="footer-group">
                             <i class="far fa-copyright copy-icon"></i>
-                            <span class="description ml-2"><span id="year"></span> by Arun Kumar</span>
+                            <span class="description ml-2"><span id="year"></span> 2024 Arunkumar. All rights reserved.</span>
                         </div>
                     </div>
                 </div>
