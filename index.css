@@ -10,47 +10,53 @@ body {
     min-height: 100%;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
-    background-color: #0a192f;
-    color: #8892b0;
+    background-color: #000000;
+    color: #FFFFFF;
     font-family: 
 'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
     font-size: 20px;
     line-height: 1.3;
+    
 
 }
-
-.logo{
-    width: 2rem;
-    height: 2rem;
+.ak_logo_img{
+    width: 4rem;
     transition: all linear 0.5s;
+    border-radius: 50%;
+    filter: hue-rotate(160deg);
+    
+
 }
 .span-logo{
     font-family:'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
 }
 
 .custom-navbar{
-    background-color: #0a192f;
+    background-color: #000000;
     justify-content: space-between;
     font-size: 16px;
 }
 
 #navItem1,#navItem2,#navItem3,#navItem4,#navItem5,#navItem6{
-    color: #f4f4f5;
+    color: #FFFFFF;
     font-family: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
     transition: all linear 0.5s;
     margin-right: 10px;
     text-decoration: none;
     padding:6px;
+    border: 2px solid #313131;
+    border-radius: 8px;
 }
 
 #navItem1:hover,#navItem2:hover,#navItem3:hover,#navItem4:hover,#navItem5:hover,#navItem6:hover{
-    color: #64ffda;
+    color: #ff4533;
+    border: 2px solid #ff4533;
 }
 
 
 .active {
-    background-color: #88878a;
-    border-radius: 8px;
+    color: #ff4533 !important;
+    border: 2px solid #ff4533 !important;
 }
 
 .Home-section {
@@ -62,7 +68,7 @@ body {
 
 .content{
     background: transparent;
-    background-color: rgb(6, 6, 6);
+    background-color:#000000;
     opacity: 0.5;
     padding:30px;
     width:500px;
@@ -146,12 +152,14 @@ aboutsection
 =--------------- */
 
 .about-section {
-    background-color:#0a192f;
+    background-color:#000000;
     width: 100%;
 }
 .about-section-img {
     width: 270px;
     margin-top: 15vh;
+    filter: invert(1);
+    border-radius: 50%;
 }
 
 .section-heading {
@@ -162,7 +170,7 @@ aboutsection
     position: relative;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    color:#ccd6f6;
+    color:#ffffff;
 }
 
 
@@ -174,16 +182,20 @@ aboutsection
     width: 300px;
     height: 1px;
     margin-left: 20px;
-    background-color: #233554;
+    background-color: #ff4533;
 }
 .description1{
-    color:#8892b0;
+    color:#FFFFFF;
     font-family:'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
     font-size: 18px;
 }
+.description1 a:hover{
+    text-decoration: none;
+
+}
 
 .about-section-para {
-    color: #8892b0;
+    color: #FFFFFF;
     font-family:'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
     font-size: 24px;
 }
@@ -218,14 +230,14 @@ Resume
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #ccd6f6;
+    color: #ffffff;
     width: 100%;
 }
 
 .resume-item,.skill_main{
     padding: 0 0 20px 20px;
     margin-top: -2px;
-    border-left: 2px solid #a8b2d1;
+    border-left: 2px solid #ff4533;
     position: relative;
 }
 
@@ -234,14 +246,14 @@ Resume
     font-size: 18px;
     font-weight: 600;
     font-family: 'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
-    color: #64ffda;
+    color: #ff4533;
     margin-bottom: 10px;
     margin-left:5px;
 }
 
 .resume-item h5 {
     font-size: 16px;
-    background: #112240;
+    background: #18181b;
     padding: 5px 15px;
     display: inline-block;
     font-weight: 600;
@@ -268,8 +280,8 @@ Resume
     border-radius: 50px;
     left: -9px;
     top: 0;
-    background: #a8b2d1;
-    border: 2px solid #a8b2d1;
+    background: #ff4533;
+    border: 2px solid #ff4533;
 }
 
 .skill_bar{
@@ -289,7 +301,7 @@ Resume
 .bar{
     width: 100%;
     height: 10px;
-    background-color:#233554;
+    background-color:#313131;
     border-radius: 25px;
     margin-top: 5px;
     position: relative;
@@ -299,7 +311,7 @@ Resume
     width: 50%;
     height: 100%;
     position: absolute;
-    background-color: #a8b2d1;
+    background-color: #c8c8c8;
     border-radius: 25px;
 }
 .bar .html{
@@ -429,23 +441,17 @@ Portfolio
 }
 
 .project-title {
-    color: #8892b0;;
+    color: #ffffff;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
     font-size: 18px;
     font-weight: 600;
     margin-top: 24px;
 }
 
-.project-title-wiki{
-    color: #8892b0;;
-    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-    font-size: 15px;
-    font-weight: 600;
-    margin-top: 24px;
-}
+
 
 .project-link {
-    color: #8892b0;;
+    color: #c8c8c8;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
     font-size: 14px;
     font-weight: 600;
@@ -453,11 +459,11 @@ Portfolio
 
 .project-link:hover{
     text-decoration: none;
-    color: #64ffda;
+    color: #ff4533;
 }
 .project-section {
     border-radius: 16px;
-    background-color: #112240;
+    background-color: #18181b;
 }
 
 .project-logo{
@@ -475,20 +481,20 @@ Contact
 ---------------------- */
 
 .contact-section{
-    background-color: #0a192f;
+    background-color: #000000;
 }
 
 .contact-section .infor{
     width:100%;
     padding: 50px;
-    background-color: #112240;
+    background-color: #18181b;
     box-sizing: border-box;
     border-radius: 16px;
 }
 
 .contact-section .infor i {
     font-size: 20px;
-    color:#8892b0;
+    color:#FFFFFF;
     float: left;
     width: 44px;
     height: 44px;
@@ -505,14 +511,14 @@ Contact
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 5px;
-    color:#ccd6f6;
+    color:#ffffff;
 }
 
 .contact-section .infor p {
     padding: 0 0 10px 60px;
     margin-bottom: 20px;
     font-size: 14px;
-    color:#8892b0;
+    color:#FFFFFF;
 }
 
 .contact-section .infor .email p {
@@ -522,11 +528,11 @@ Contact
 .contact-section .infor .email:hover i,
 .contact-section .infor .address:hover i,
 .contact-section .infor .phone:hover i {
-    color:#64ffda;
+    color:#ff4533;
 }
 
 .description-contact{
-    color: #8892b0;
+    color: #FFFFFF;
     font-family:'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -535,7 +541,7 @@ Contact
 .box{
     width:100%;
     padding: 40px;
-    background-color: #112240;
+    background-color: #18181b;
     box-sizing: border-box;
     border-radius: 16px;
 }
@@ -544,7 +550,7 @@ Contact
 .box h2{
     margin: 0 0 10px;
     padding: 0;
-    color: #ccd6f6;
+    color: #ffffff;
     text-align: center;
     font-weight: 700;
 }
@@ -562,11 +568,11 @@ Contact
     width: 100%;
     padding:8px 5px;
     font-size: 14px;
-    color:#8892b0;
+    color:#FFFFFF;
     margin-top: 10px;
     margin-bottom: 4px;
     /* border: none; */
-    border: 1px solid #8892b0;
+    border: 1px solid #FFFFFF;
     border-radius: 5px;
     outline: none;
     background-color:transparent;
@@ -579,7 +585,7 @@ Contact
     left:0;
     padding:10px 0;
     font-size: 16px;
-    color:#8892b0;
+    color:#FFFFFF;
     pointer-events: none;
     transition: 0.5s;
     font-weight: 600;
@@ -589,16 +595,16 @@ Contact
     top: -28px;
     left:0;
     font-size: 16px;
-    color:#ccd6f6;
+    color:#ffffff;
     font-weight: 600;
 }
 
 
 #sub{
-    color: #64ffda;
+    color: #ff4533;
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid #64ffda;
+    border: 2px solid #ff4533;
     border-radius: 4px;
     padding: 0.75rem 1rem;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
@@ -613,9 +619,9 @@ Contact
 }
 
 #sub:hover{
-    color: #64ffda;
+    color: #ff4533;
     outline: none;
-    box-shadow: 3px 3px 0 0 #64ffda;
+    box-shadow: 3px 3px 0 0 #ff4533;
     transform: translate(-4px, -4px);
     transition: 0.2s;
 }
@@ -645,7 +651,7 @@ Contact
 
 }
 ::placeholder {
-    color: #ccd6f6;
+    color: #ffffff;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 
   }
@@ -656,11 +662,11 @@ footer
 
 
 .footer {
-    background-color: #0a192f;
+    background-color: #000000;
 }
 
 .description{
-    color: #ccd6f6;
+    color: #ffffff;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
     font-weight: 400;
 }
@@ -669,6 +675,6 @@ footer
     padding:0 10px;
 }
 .copy-icon {
-    color: #ccd6f6;
+    color: #ffffff;
     font-size: 22px;
 }
