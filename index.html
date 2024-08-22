@@ -664,10 +664,10 @@
                                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
-                    <!-- <div class=" col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class=" col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
                         <div class="box d-flex flex-column  align-items-stretch">
                             <h2 class="mb-5">Send Message</h2>
-                            <form id="form">
+                            <!-- <form id="form">
                                 <span id="span"></span>
                                 <div class="inputBox">
                                     <input type="text" name="name" id="fullname" placeholder="Enter your Full Name"
@@ -693,11 +693,46 @@
                                     <label for="message">Message</label>
                                     <small>Error message</small>
                                 </div>
-                                 <input type="submit" id="sub" value="Submit" class="text-center"/> 
+                                <input type="submit" id="sub" value="Submit" class="text-center"/> 
                                 <button type="submit" id="sub">Send</button>
+                            </form> -->
+                            <form id="myForm" action="https://formspree.io/f/xkgwqqdy" method="POST">
+                                <span id="span"></span>
+
+                                <div class="inputBox">
+                                    <input type="text" name="name" id="fullname" placeholder="Enter your Full Name"
+                                        value="" />
+                                    <label for="fullname">Full Name</label>
+                                    <small>Error message</small>
+                                </div>
+
+                                <div class="inputBox">
+                                    <input type="text" name="email" id="email"
+                                        placeholder="Enter your valid email address" value="" />
+                                    <label for="email">Email</label>
+                                    <small>Error message</small>
+                                </div>
+
+
+                                <div class="inputBox">
+                                    <input type="text" name="phonenumber" id="phonenumber"
+                                        placeholder="Enter your phone Number" value="" />
+                                    <label for="phonenumber">Phone Number</label>
+                                    <small>Error message</small>
+                                </div>
+
+                                <div class="inputBox">
+                                    <textarea type="textarea" placeholder="Type your message here" name="message"
+                                        id="message" rows="4" cols="70" value=""></textarea>
+                                    <label for="message">Message</label>
+                                    <small>Error message</small>
+                                </div>
+                                <button type="submit" id="sub">Send  <i class="fa-solid fa-paper-plane"></i>
+                                </button>
                             </form>
+
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -706,6 +741,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
+                        <a class="navbar-brand" href="#">
+                            <img src="/ak_2.jpg" class="ak_logo_img" />
+                        </a>
                         <div class="footer-group">
                             <i class="far fa-copyright copy-icon"></i>
                             <span class="description ml-2"><span id="year"></span> 2024 Arunkumar. All rights reserved.</span>
@@ -720,8 +758,7 @@
         <script>
             AOS.init();
         </script>
-        <!-- send email from js -->
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
         <script src="./index.js"></script>
         <script>
             $(document).ready(function(){

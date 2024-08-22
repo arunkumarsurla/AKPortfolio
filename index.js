@@ -26,7 +26,7 @@ window.addEventListener("scroll", () => {
 
 
 
-const form = document.getElementById('form');
+const form = document.getElementById('myForm');
 const fullname=document.getElementById("fullname");
 const email=document.getElementById('email');
 const phone=document.getElementById('phonenumber');
@@ -134,24 +134,10 @@ form.addEventListener('submit', e =>{
     shouldValidate = true;
     const valid = validate();
     if(valid){
-        var body = 'Name: '+fullname.value + '<br/> Email: ' +email.value + '<br/> Phonenumber: '+phone.value
-        + '<br/> Message: '+msg.value;
-        var sub = fullname.value +"'s message from portfolio contact form!";
-
-        Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "arunkumarsurla1@gmail.com",
-            Password : "5E0D6BA0CC11EC09D9609D0CC1CA72BA8144",
-            To : 'arunkumarsurla1@gmail.com',
-            From : "arunkumarsurla1@gmail.com",
-            Subject : sub,
-            Body : body
-        }).then(
-            message => alert("Message Sent Successfully to  Arun Kumar")
-        )
-        reset(inputs);
+            form.submit();
+            reset(inputs);
     }
-})
+}) 
 
 inputs.forEach((input) => input.addEventListener("input", validate))
 
