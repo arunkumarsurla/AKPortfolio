@@ -141,13 +141,3 @@ form.addEventListener('submit', e =>{
 
 inputs.forEach((input) => input.addEventListener("input", validate))
 
-
-// ------------------
-// footer
-// ------------------
-let yearEl = document.getElementById("year");
-let date=new Date();
-let year = date.getFullYear();
-yearEl.textContent = year;
-
-
