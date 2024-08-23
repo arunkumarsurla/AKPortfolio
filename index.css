@@ -1026,3 +1026,32 @@ a {
     }
 }
 
+
+.custom-cursor {
+    position: fixed;
+   box-sizing: border-box;
+   transform: translate(-50%, -50%);
+   width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    pointer-events: none; 
+    z-index: 10000;
+    transition: all 400ms ease-out;
+    border: 2px solid #ff4533;
+}
+
+.custom-cursor::after {
+    content: '';
+    position: absolute;
+    width: 0.3rem;
+    box-sizing: border-box;
+    height: 0.3rem;
+    background-color: #ff4533;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transition: all 400ms ease-out;
+    transform: translate(-50%, -50%);
+}
+
+

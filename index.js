@@ -141,3 +141,8 @@ form.addEventListener('submit', e =>{
 
 inputs.forEach((input) => input.addEventListener("input", validate))
 
+document.addEventListener('mousemove', (e) => {
+    const cursor = document.querySelector('.custom-cursor');
+    cursor.style.left = `${e.pageX}px`;  // Adjust the x position
+    cursor.style.top = `${e.pageY}px`;   // Adjust the y position
+});
