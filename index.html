@@ -156,8 +156,7 @@
                     <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color">01. </span>
                         About Me
                     </h2>
-                    <h3 class="about-section-para">Hello! I'm Arun Kumar, a 24-year-old Software Engineer from Andhra
-                        Pradesh, India. My interests lie in #Technology, Science, and everything associated with them.
+                    <h3 class="about-section-para">Hello! I'm Arun Kumar, a Software Engineer from Andhra Pradesh, India. I'm passionate about #Technology, Science, and everything related to them.
                     </h3>
                     <p class="description1">
                         My journey into web development commenced in 2020, and since then, I've honed my expertise in
@@ -288,8 +287,9 @@
                     </div>
 
                     <h3 class="resume-title">Skills</h3>
-                    <div class="skill_main" data-aos="fade-up">
-                        <div class="skill-bar mt-2">
+                    <div class="skill_main" data-aos="fade-up" id="skillDataContainer">
+                        <div class="spinner" id="loading"></div>
+                        <!-- <div class="skill-bar mt-2">
                             <div class="info">
                                 <p>HTML 5</p>
                                 <P>90%</P>
@@ -297,88 +297,7 @@
                             <div class="bar">
                                 <span class="html"></span>
                             </div>
-                        </div>
-                        <div class="skill-bar mt-2">
-                            <div class="info">
-                                <p>CSS 3</p>
-                                <P>90%</P>
-                            </div>
-                            <div class="bar">
-                                <span class="css"></span>
-                            </div>
-                        </div>
-                        <div class="skill-bar mt-2">
-                            <div class="info">
-                                <p>BOOTSTRAP</p>
-                                <P>80%</P>
-                            </div>
-                            <div class="bar">
-                                <span class="bootstrap"></span>
-                            </div>
-                        </div>
-                        <div class="skill-bar mt-2">
-                            <div class="info">
-                                <p>JAVASCRIPT</p>
-                                <P>80%</P>
-                            </div>
-                            <div class="bar">
-                                <span class="js"></span>
-                            </div>
-                        </div>
-                        <div class="skill-bar mt-2">
-                            <div class="info">
-                                <p>REACT JS</p>
-                                <P>70%</P>
-                            </div>
-                            <div class="bar">
-                                <span class="react"></span>
-                            </div>
-                        </div>
-                        <div class="skill-bar mt-2">
-                            <div class="info">
-                                <p>Node JS</p>
-                                <P>60%</P>
-                            </div>
-                            <div class="bar">
-                                <span class="node"></span>
-                            </div>
-                        </div>
-                        <div class="skill-bar mt-2">
-                            <div class="info">
-                                <p>Express JS</p>
-                                <P>55%</P>
-                            </div>
-                            <div class="bar">
-                                <span class="express"></span>
-                            </div>
-                        </div>
-                        <div class="skill-bar mt-2">
-                            <div class="info">
-                                <p>PHP</p>
-                                <P>65%</P>
-                            </div>
-                            <div class="bar">
-                                <span class="mongo"></span>
-                            </div>
-                        </div>
-                        <div class="skill-bar mt-2">
-                            <div class="info">
-                                <p>SQL</p>
-                                <P>80%</P>
-                            </div>
-                            <div class="bar">
-                                <span class="sql"></span>
-                            </div>
-                        </div>
-                        <div class="skill-bar mt-2">
-                            <div class="info">
-                                <p>PYTHON</p>
-                                <P>65%</P>
-                            </div>
-                            <div class="bar">
-                                <span class="python"></span>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -400,9 +319,10 @@
 
 
 
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="shadow project-section p-3 mb-3">
+            <div class="row" id="projectsData">
+                <div class="spinner" id="loading">
+                <!-- <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="shadow p-3 mb-3">
                         <img src="./assests/foodmunchpage.png" class="project-image w-100" />
                         <h1 class="project-title">Food Munch Page</h1>
                         <div class="d-flex justify-content-between">
@@ -417,268 +337,9 @@
                             <img src="./assests/javascript-logo.png" class="project-logo" alt="">
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
-                    <div class="shadow project-section p-3 mb-3">
-                        <img src="./assests/todoProjectImage.png" class="project-image w-100" />
-                        <h1 class="project-title">Todos Page</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/javascript-logo.png" class="project-logo" alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
-                    <div class="shadow project-section p-3 mb-3">
-                        <img src="./assests/flybuypage.png" class="project-image w-100" />
-                        <h1 class="project-title">Fly Buy</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/javascript-logo.png" class="project-logo" alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
-                    <div class="shadow project-section p-3 mb-3">
-                        <img src="./assests/wiki.png" class="project-image w-100" />
-                        <h1 class="project-title">Wikipedia Page</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/javascript-logo.png" class="project-logo" alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="140">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="./assests/gallerypage.png" class="project-image w-100" />
-                        <h1 class="project-title">Gallery Page</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/javascript-logo.png" class="project-logo" alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="./assests/cssgradient.png" class="project-image w-100" />
-                        <h1 class="project-title">Gradient Generator</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/javascript-logo.png" class="project-logo" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="220">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="./assests/digitaltimer.png" class="project-image w-100" />
-                        <h1 class="project-title">Digital Timer App</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/react-js.png" class="project-logo-react" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="./assests/ipldashboard.png" class="project-image w-100" />
-                        <h1 class="project-title">IPL Dashboard</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/react-js.png" class="project-logo-react" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="./assests/techerapage.png" class="project-image w-100" />
-                        <h1 class="project-title">Technologies Page</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/react-js.png" class="project-logo-react" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="./assests/bookhub.png" class="project-image w-100" />
-                        <h1 class="project-title">BookHub</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/react-js.png" class="project-logo-react" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="./assests/coviddashboard.png" class="project-image w-100" />
-                        <h1 class="project-title">Covid 19 Dashboard</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/react-js.png" class="project-logo-react" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="./assests/cryptotrackerpage.png" class="project-image w-100" />
-                        <h1 class="project-title">Crypto Tracker</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/react-js.png" class="project-logo-react" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="./assests/appstore.png" class="project-image w-100" />
-                        <h1 class="project-title">App Store</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/react-js.png" class="project-logo-react" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="./assests/projectslist.png" class="project-image w-100" />
-                        <h1 class="project-title">Projects Page</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/react-js.png" class="project-logo-react" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="./assests/createContacts.png" class="project-image w-100" />
-                        <h1 class="project-title">Contact List App</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/react-js.png" class="project-logo-react" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="./assests/MoneyMangerImage.png" class="project-image w-100" />
-                        <h1 class="project-title">Money Manager App</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/react-js.png" class="project-logo-react" alt="">
-                        </div>
-                    </div>
-                </div>
+                </div> -->
             </div>
+          </div>
         </div>
     </section>
 
@@ -752,7 +413,6 @@
                             <button type="submit" id="sub">Send <i class="fa-solid fa-paper-plane"></i>
                             </button>
                         </form>
-
                     </div>
                 </div>
             </div>
