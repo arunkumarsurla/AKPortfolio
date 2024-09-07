@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <title>AK's Portfolio</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- aos library link -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+    .form-input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+    .form-input-box input,
+.form-input-box textarea {
+    width: 100%;
+    padding: 8px 5px;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    /* border: none; */
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.form-input-box label {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #FFFFFF;
+    pointer-events: none;
+    transition: 0.5s;
+    font-weight: 600;
+}
+</style>
+
+<body>
+    <section class=" pt-5 pb-5 w-100" id="">
+        <div class="shadow container">
+            <div class="section-title mb-5 pb-2">
+                <h2 class="section-heading mt-5 d-flex">Provide Your Project Details / Skills Information</h2>
+                <p class="description-contact">This will assist in adding both your project data and skills
+                    information...</p>
+            </div>
+            <div class="row" style="justify-content: center;">
+                <div class=" col-lg-6 mb-5">
+                    <div class="box d-flex flex-column  align-items-stretch">
+                        <h2 class="mb-5" style="color: #ff4533">Projects</h2>
+                        <form id="projectsForm">
+                            <div id="loading"></div>
+                            <span id="span"></span>
+                        
+                            <div class="form-input-box">
+                                <label for="projectname">Project Name</label>
+                                <input class="mt-5" type="text" name="projectname" id="projectname"
+                                    placeholder="Enter your project name"  required />
+                            </div>
+                        
+                            <div class="form-input-box">
+                                <label for="projecturl">Project URL</label>
+                                <input class="mt-5" type="text" name="projecturl" id="projecturl"
+                                    placeholder="Enter your project URL"  required />
+                            </div>
+                        
+                            <div class="form-input-box">
+                                <label for="logourl">Logo Image URL</label>
+                                <input class="mt-5" type="text" name="logourl" id="logourl"
+                                    placeholder="Paste your logo URL"  required />
+                            </div>
+                        
+                            <div class="form-input-box">
+                                <label for="projectimageurl">Project Image URL</label>
+                                <input class="mt-5" type="text" name="projectimageurl" id="projectimageurl"
+                                    placeholder="Paste your project image URL"  required />
+                            </div>
+                        
+                            <button type="submit" id="sub">Save <i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                        
+                    </div>
+                </div>
+                <div class=" col-lg-6 mb-5">
+                    <div class="box d-flex flex-column  align-items-stretch">
+                        <h2 class="mb-5" style="color: #ff4533">Skills</h2>
+                        <form id="skillsForm">
+                            <div id="skillsloader"></div>
+                            <span id="skilsspan"></span>
+
+                            <div class="form-input-box">
+                                <input class="mt-5" type="text" name="skillname" id="skillname"
+                                    placeholder="Enter your skill name"  required />
+                                <label for="skillname">Skill Name</label>
+
+                            </div>
+
+                            <div class="form-input-box">
+                                <input class="mt-5" type="text" name="percentage" id="percentage"
+                                    placeholder="Enter your skill percentage"  required />
+                                <label for="percentage">Percentage</label>
+                            </div>
+
+
+                            <div class="form-input-box">
+                                <input class="mt-5" type="text" name="skillclassname" id="skillclassname"
+                                    placeholder="Enter your skills class name"  required />
+                                <label for="skillclassname">Skill Class Name</label>
+
+                            </div>
+
+                            <div class="form-input-box">
+                                <input class="mt-5" type="text" name="skillicon" id="skillicon"
+                                    placeholder="Enter your skill icon path"  required />
+                                <label for="skillicon">Font Awesome Skill Icon</label>
+
+                            </div>
+                            <button type="submit" id="sub">Save <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="./api.js"></script>
+</body>
+</html>
