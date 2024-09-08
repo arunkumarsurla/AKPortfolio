@@ -122,11 +122,12 @@
                         <div class="box d-flex flex-column align-items-stretch" style="padding:1rem;">
                             <form id="projectsForm">
                                 <div id="formLoader" class="form-spinner" style="display: none;left:40%"></div>
+                                <span id="span"></span>
 
                                 <div class="form-input-box">
                                     <!-- <label for="projectid">Project Id</label> -->
-                                    <input class="mt-5" type="hidden" name="projectid" id="projectid"
-                                        placeholder="projectid" />
+                                    <input class="mt-5" name="projectid" id="projectid"
+                                        placeholder="projectid" hidden/>
                                 </div>
 
                                 <div class="form-input-box">
@@ -257,12 +258,12 @@ async function insertProjectData(formData) {
         const result = await response.json();
         document.getElementById("projectsForm").reset();
         fetchProjects();
-        displayResponse("Project saved successfully!", "success");
+        displayResponse("Project created successfully!", "success");
 
 
     } catch (error) {
         console.error("Error:", error);
-        displayResponse("Error saving project.", "error");
+        displayResponse("Error creating project.", "error");
     } finally {
         hideFormLoader();
     }
@@ -300,8 +301,9 @@ async function updateProjectData(id, formData) {
         if (!response.ok) throw new Error("Error in updating project");
         const result = await response.json();
         displayResponse("Project updated successfully!", "success");
-        document.getElementById("projectsForm").reset();
         fetchProjects();
+        document.getElementById("projectsForm").reset();
+
     } catch (error) {
         console.error("Error:", error);
         displayResponse("Error updating project.", "error");
@@ -352,6 +354,7 @@ function hideFormLoader() {
 
 function getFormData() {
     return {
+        projectId: document.getElementById("projectid").value,
         projectName: document.getElementById("projectname").value,
         projectUrl: document.getElementById("projecturl").value,
         logoPng: document.getElementById("logourl").value,
