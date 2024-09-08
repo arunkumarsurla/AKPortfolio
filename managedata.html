@@ -5,157 +5,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
     <title>AK's Portfolio</title>
-    <!-- font awesome -->
-    <link rel="stylesheet" href="./index.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <!-- aos library link -->
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
+    <!-- AOS library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- AOS library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./index.css">
 </head>
 <style>
-    .delete-button,
-    .edit-button {
-        color: #FFFFFF;
-        font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-        transition: all linear 0.5s;
-        margin-right: 10px;
-        text-decoration: none;
-        padding: 6px;
-        border: 2px solid #313131;
-        border-radius: 8px;
-    }
-
-    .delete-button:hover {
-        color: #ff4533;
-        border: 2px solid #ff4533;
-    }
-
-    .edit-button:hover {
-        color: greenyellow;
-        border: 2px solid greenyellow;
-    }
-
-    .no-projects-message {
-        padding: 20px;
-        font-size: 18px;
-        color: #ff0000;
-    }
-
-    .default-button {
-        color: #ff4533;
-        background-color: transparent;
-        border: 2px solid #ff4533;
-        border-radius: 8px;
-        padding: 1rem;
-        font-size: 16px;
-        line-height: 1;
-        text-decoration: none;
-        margin-bottom: 1rem;
-    }
-
-    .form-input-box {
-        position: relative;
-        margin-bottom: 20px;
-    }
-
-    .form-input-box input,
-    .form-input-box textarea {
-        width: 100%;
-        padding: 8px 5px;
-        font-size: 14px;
-        color: #FFFFFF;
-        margin-top: 10px;
-        margin-bottom: 4px;
-        /* border: none; */
-        border: 1px solid #FFFFFF;
-        border-radius: 5px;
-        outline: none;
-        background-color: transparent;
-        font-weight: 600;
-    }
-
-    .form-input-box label {
-        position: absolute;
-        top: 0px;
-        left: 0;
-        padding: 10px 0;
-        font-size: 16px;
-        color: #FFFFFF;
-        pointer-events: none;
-        transition: 0.5s;
-        font-weight: 600;
-    }
-
-    .modal-content {
-        background-color: #18181b;
-    }
+    .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 300px;
+        }
+        .popup-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .popup-button:hover {
+            background-color: #0056b3;
+        }
+    
 </style>
 
 <body>
     <section class="portfolio-section pt-5 pb-5 w-100" id="manageDataSection">
         <div class="container">
-
-
             <div class="section-title">
-
-
-                <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color"></span>Manage Projects Data...
+                <h2 class="section-heading mt-5 d-flex">
+                    <span class="custom-font-color"></span>Manage Projects Data...
                 </h2>
                 <p class="description1">Here, you can handle your project data by editing, deleting, or viewing it.</p>
             </div>
-
-            <button type="button" class="default-button" data-toggle="modal" data-target="#projectsModal">Add Project <i
-                    style="color:#ff4533" class="fa-solid fa-plus"></i></button>
-            <div class="row" id="projectsData">
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="spinner" style="left:200%" id="loading"></div>
-                    <div class="no-projects-message" id="noProjectsMessage" style="display: none;">There are no projects
-                        at the moment.</div>
-
-                    <!-- <div class="shadow p-3 mb-3">
-                        <img src="./assests/foodmunchpage.png" class="project-image w-100" />
-                        <h1 class="project-title">Food Munch Page</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <div class="delete-button resume-button"><a>Delete <i class="fa fa-trash"
-                            style="color:#ff4533"></i></a></div>
-                    </div>
-                            <img src="./assests/javascript-logo.png" class="project-logo" alt="">
-                        </div> -->
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <p id="popupMessage">Your data has been saved!</p>
+                    <button class="popup-button" onclick="closePopup()">OK</button>
                 </div>
             </div>
-        </div>
+        
+    
+            <button type="button" class="default-button" data-toggle="modal" data-target="#projectsModal">
+                Add Project <i style="color:#ff4533" class="fa-solid fa-plus"></i>
+            </button>
+    
+            <div class="spinner" id="loading" style="display: none;"></div>
+            <div class="no-projects-message" id="noProjectsMessage" style="display: none;">
+                There are no projects at the moment.
+            </div>
+            <div class="row" id="projectsData"></div>
         </div>
     </section>
+  
+  <!-- pop up Modal -->
+  <div class="modal fade" id="popUpModal" tabindex="-1" role="dialog" aria-labelledby="popUpModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body" style="text-align: center;padding-top: 5rem;padding-bottom: 5rem;">
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    
 
 
     <!-- Modal -->
-    <div class="modal fade" id="projectsModal" tabindex="-1" role="dialog" aria-labelledby="projectsModalLabel"
+    <div class="modal fade" id="projectsModal"  role="dialog" aria-labelledby="projectsModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -165,12 +117,11 @@
                         <span style="color: #ff4533" aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="text-align: center;padding: 1rem;">
                     <div class="w-100">
-                        <div class="box d-flex flex-column align-items-stretch">
+                        <div class="box d-flex flex-column align-items-stretch" style="padding:1rem;">
                             <form id="projectsForm">
                                 <div id="formLoader" class="form-spinner" style="display: none;left:40%"></div>
-                                <span id="span"></span>
 
                                 <div class="form-input-box">
                                     <!-- <label for="projectid">Project Id</label> -->
@@ -208,234 +159,232 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="default-button" data-dismiss="modal">Close</button>
-                </div>
             </div>
         </div>
     </div>
 
 
     <script>
-
-        const apiEndpoint = 'https://668d0469099db4c579f16037.mockapi.io/api/data/projectData';
-
-
-        document.addEventListener('DOMContentLoaded', () => {
-            fetchProjects();
-
-            document.getElementById('projectsForm').addEventListener('submit', (e) => {
-                e.preventDefault();
-                const projectId = document.getElementById("projectid").value;
-                const formData = getFormData();
+         const apiEndpoint = 'https://668d0469099db4c579f16037.mockapi.io/api/data/projectData';
 
 
-                if (projectId) {
-                    // Update existing project
-                    updateProjectData(projectId, formData);
-                } else {
-                    // Add new project
-                    insertProjectData(formData);
-                }
+document.addEventListener('DOMContentLoaded', () => {
+    fetchProjects();
+
+    document.getElementById('projectsForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const projectId = document.getElementById("projectid").value;
+        const formData = getFormData();
+
+
+        if (projectId) {
+            // Update existing project
+            updateProjectData(projectId, formData);
+
+        } else {
+            // Add new project
+            insertProjectData(formData);
+
+        }
+        $("#projectsModal").modal('hide');
+
+    });
+});
+async function fetchProjects() {
+    const projectsData = document.getElementById('projectsData');
+    const noProjectsMessage = document.getElementById('noProjectsMessage')
+    showLoading();
+    try {
+        const response = await fetch(apiEndpoint);
+        const projects = await response.json();
+        let htmlData = "";
+        if (projects.length === 0) {
+            noProjectsMessage.style.display = 'block';
+            hideLoading()
+        } else {
+            noProjectsMessage.style.display = 'none';
+            projects.forEach((project) => {
+                htmlData += `
+               <div class="col-12 col-md-6 col-lg-3" id="project-${project.id}">
+                   <div class="project-section shadow p-3 mb-3">
+                       <img src="${project.projectImg}" alt="${project.id}" class="project-image w-100" />
+                       <h1 class="project-title">${project.projectName}</h1>
+                       <div class="d-flex justify-content-between">
+                           <a href="${project.projectUrl}" class="project-link" target="_blank">
+                               View Project
+                               <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short"
+                                   fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
+                                   <path fill-rule="evenodd"
+                                       d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                               </svg>
+                           </a>
+                           <div class="edit-button" onclick="editRecord(${project.id})">
+                               <a href="javascript:void(0)" >
+                                   <i class="fa fa-edit" style="color:greenyellow"></i>
+                               </a>
+                           </div>
+                           <div class="delete-button" onclick="deleteRecord(${project.id})">
+                               <a href="javascript:void(0)" >
+                                   <i class="fa fa-trash" style="color:#ff4533"></i>
+                               </a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               `;
             });
+            projectsData.innerHTML = htmlData;
+        }
+    } catch (error) {
+        console.log(error);
+    }
+    hideLoading()
+}
+
+async function insertProjectData(formData) {
+    showFormLoader();
+    try {
+        const response = await fetch(apiEndpoint, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData)
         });
-        async function fetchProjects() {
-            const projectsData = document.getElementById('projectsData');
-            const noProjectsMessage = document.getElementById('noProjectsMessage')
-            showLoading();
-            try {
-                const response = await fetch(apiEndpoint);
-                const projects = await response.json();
-                let htmlData = "";
-                if (projects.length === 0) {
-                    noProjectsMessage.style.display = 'block';
-                    hideLoading()
-                } else {
-                    noProjectsMessage.style.display = 'none';
-                    projects.forEach((project) => {
-                        htmlData += `
-                <div class="col-12 col-md-6 col-lg-3" id="project-${project.id}">
-                    <div class="project-section shadow p-3 mb-3">
-                        <img src="${project.projectImg}" alt="${project.id}" class="project-image w-100" />
-                        <h1 class="project-title">${project.projectName}</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="${project.projectUrl}" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <div class="edit-button" onclick="editRecord(${project.id})">
-                                <a href="javascript:void(0)" >
-                                    <i class="fa fa-edit" style="color:greenyellow"></i>
-                                </a>
-                            </div>
-                            <div class="delete-button" onclick="deleteRecord(${project.id})">
-                                <a href="javascript:void(0)" >
-                                    <i class="fa fa-trash" style="color:#ff4533"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                `;
-                    });
-                    projectsData.innerHTML = htmlData;
-                    console.log("API Response:", projects);  // To check API response data
+
+        if (!response.ok) throw new Error("Error in creating project");
+
+        const result = await response.json();
+        document.getElementById("projectsForm").reset();
+        fetchProjects();
+        displayResponse("Project saved successfully!", "success");
+
+
+    } catch (error) {
+        console.error("Error:", error);
+        displayResponse("Error saving project.", "error");
+    } finally {
+        hideFormLoader();
+    }
+}
+
+
+function editRecord(id) {
+    $("#projectsModal").modal('show');
+    showFormLoader();
+    fetch(`${apiEndpoint}/${id}`)
+        .then(response => response.json())
+        .then(project => {
+            document.getElementById("projectid").value = project.id;
+            document.getElementById("projectname").value = project.projectName;
+            document.getElementById("projecturl").value = project.projectUrl;
+            document.getElementById("logourl").value = project.logoPng;
+            document.getElementById("projectimageurl").value = project.projectImg;
+            document.getElementById("projectsModalLabel").innerText = "Edit Project Details";
+            hideFormLoader();
+        })
+        .catch(error => console.error('Error fetching project data:', error));
+}
+
+
+async function updateProjectData(id, formData) {
+    showFormLoader();
+    try {
+        const response = await fetch(`${apiEndpoint}/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData)
+        });
+        if (!response.ok) throw new Error("Error in updating project");
+        const result = await response.json();
+        displayResponse("Project updated successfully!", "success");
+        document.getElementById("projectsForm").reset();
+        fetchProjects();
+    } catch (error) {
+        console.error("Error:", error);
+        displayResponse("Error updating project.", "error");
+    } finally {
+        hideFormLoader();
+    }
+}
+
+function deleteRecord(id) {
+    if (confirm("Are you sure you want to delete this project?") == true) {
+        fetch(`${apiEndpoint}/${id}`, {
+                method: 'DELETE'
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
                 }
-            } catch (error) {
-                console.log(error);
-            }
-        }
+                return response.json();
 
-        async function insertProjectData(formData) {
-            showFormLoader();
-            try {
-                const response = await fetch(apiEndpoint, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formData)
-                });
+            })
+            .then(() => {
+                document.getElementById(`project-${id}`).remove();
+                displayResponse("Project Successfully Deleted", "success");
 
-                if (!response.ok) throw new Error("Error in creating project");
-
-                const result = await response.json();
-                displayResponse("Project saved successfully!", "success");
-                document.getElementById("projectsForm").reset();
-                fetchProjects();  // Fetch updated list of projects
-            } catch (error) {
-                console.error("Error:", error);
-                displayResponse("Error saving project.", "error");
-            } finally {
-                hideFormLoader();
-                const hideFormInputBoxes = document.querySelectorAll(".form-input-box");
-                hideFormInputBoxes.forEach(inputBox => {
-                    inputBox.style.display = "none";
+                const remainingProjects = document.querySelectorAll('#projectsData .project-section');
+                if (remainingProjects.length === 0) {
                     window.location.reload();
-                });
-            }
-        }
-
-
-        function editRecord(id) {
-            $("#projectsModal").modal('show');
-            showFormLoader();
-            fetch(`${apiEndpoint}/${id}`)
-                .then(response => response.json())
-                .then(project => {
-                    document.getElementById("projectid").value = project.id;
-                    document.getElementById("projectname").value = project.projectName;
-                    document.getElementById("projecturl").value = project.projectUrl;
-                    document.getElementById("logourl").value = project.logoPng;
-                    document.getElementById("projectimageurl").value = project.projectImg;
-                    document.getElementById("projectsModalLabel").innerText = "Edit Project Details";
-                    hideFormLoader();
-                })
-                .catch(error => console.error('Error fetching project data:', error));
-        }
-
-
-        async function updateProjectData(id, formData) {
-            showFormLoader();
-            try {
-                const response = await fetch(`${apiEndpoint}/${id}`, {
-                    method: "PUT",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formData)
-                });
-                if (!response.ok) throw new Error("Error in updating project");
-                const result = await response.json();
-                displayResponse("Project updated successfully!", "success");
-                document.getElementById("projectsForm").reset();
-                fetchProjects();
-            } catch (error) {
-                console.error("Error:", error);
-                displayResponse("Error updating project.", "error");
-            } finally {
-                hideFormLoader();
-                const hideFormInputBoxes = document.querySelectorAll(".form-input-box");
-                hideFormInputBoxes.forEach(inputBox => {
-                    inputBox.style.display = "none";
-                    window.location.reload();
-                });
-            }
-        }
-
-        function deleteRecord(id) {
-            if (confirm("Are you sure you want to delete this project?") == true) {
-                fetch(`${apiEndpoint}/${id}`, {
-                    method: 'DELETE'
-                })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.json();
-
-                    })
-                    .then(() => {
-                        console.log('Project deleted:', id);
-                        document.getElementById(`project-${id}`).remove();
-                        const remainingProjects = document.querySelectorAll('#projectsData .project-section');
-                        if (remainingProjects.length === 0) {
-                            window.location.reload();
-                        }
-                    })
-                    .catch(error => console.error('Error deleting record:', error));
-            }
-        }
+                }
+            })
+            .catch(error => console.error('Error deleting record:', error));
+    }
+}
 
 
 
-        function showFormLoader() {
-            const loader = document.getElementById("formLoader");
-            loader.style.display = "block";  // Shows the loader
-            loader.classList.add('spinner'); // Adds the spinner class for the loader animation
-        }
+function showFormLoader() {
+    const loader = document.getElementById("formLoader");
+    loader.style.display = "block"; // Shows the loader
+    loader.classList.add('spinner'); // Adds the spinner class for the loader animation
+}
 
-        // Function to hide the loading message
-        function hideFormLoader() {
-            const loader = document.getElementById("formLoader");
-            loader.style.display = "none";   // Hides the loader
-            loader.classList.remove('spinner'); // Removes the spinner class to stop animation
-        }
+// Function to hide the loading message
+function hideFormLoader() {
+    const loader = document.getElementById("formLoader");
+    loader.style.display = "none"; // Hides the loader
+    loader.classList.remove('spinner'); // Removes the spinner class to stop animation
+}
 
-        function getFormData() {
-            return {
-                projectName: document.getElementById("projectname").value,
-                projectUrl: document.getElementById("projecturl").value,
-                logoPng: document.getElementById("logourl").value,
-                projectImg: document.getElementById("projectimageurl").value
-            };
-        }
+function getFormData() {
+    return {
+        projectName: document.getElementById("projectname").value,
+        projectUrl: document.getElementById("projecturl").value,
+        logoPng: document.getElementById("logourl").value,
+        projectImg: document.getElementById("projectimageurl").value
+    };
+}
 
-        function displayResponse(message, status) {
-            const spanElement = document.getElementById("span");
-            if (status === "success") {
-                spanElement.style.color = "green";
-            } else if (status === "error") {
-                spanElement.style.color = "red";
-            }
-            spanElement.innerText = message;
-        }
+function showLoading() {
+    document.getElementById("loading").style.display = "block";
+}
+
+function hideLoading() {
+    document.getElementById("loading").style.display = "none";
+}
 
 
-
-
-
-        function showLoading() {
-            document.getElementById("loading").style.display = "block";
-        }
-
-        function hideLoading() {
-            document.getElementById("loading").style.display = "none";
-        }
+       
+function displayResponse(message, status) {
+    const spanElement = document.getElementById("span");
+    const modalBody = document.querySelector("#popUpModal .modal-body");
+    
+    if (status === "success") {
+        spanElement.style.color = "yellowgreen";
+        modalBody.innerHTML = `<h4 style="color: yellowgreen;">${message } <i style="color: yellowgreen;" class="fa-solid fa-check"></i> </h4>`;
+    } else if (status === "error") {
+        spanElement.style.color = "#ff4533";
+        modalBody.innerHTML = `<h4 style="color:#ff4533 ;">${message }<i style="color:#ff4533;" class="fa-solid fa-circle-xmark"></i></h4>`;
+    }
+    $('#popUpModal').modal('show');
+    setTimeout(() => {
+        $('#popUpModal').modal('hide');
+    }, 2000);
+}
 
     </script>
 </body>
