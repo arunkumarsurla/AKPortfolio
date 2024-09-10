@@ -41,7 +41,9 @@
             </div>
            
         
-            <div class="d-flex justify-content-end">
+            <div class="d-flex justify-content-between">
+                
+                <input type="text" id="searchInput" class="form-control w-50 searchInputBox" placeholder="Search by project name" onkeyup="searchProjects()">
                 <button onclick="addProject()" type="button" class="default-button" >
                     Add Project <i style="color:#ff4533" class="fa-solid fa-plus"></i>
                 </button>
@@ -133,10 +135,11 @@
     <script>
          const apiEndpoint = 'https://668d0469099db4c579f16037.mockapi.io/api/data/projectData';
 
+         let allProjectsData = [];
+
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchProjects();
-
     document.getElementById('projectsForm').addEventListener('submit', (e) => {
         e.preventDefault();
         const projectId = document.getElementById("projectid").value;
@@ -156,6 +159,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 });
+
+
+
+function searchProjects(){
+const query = document.getElementById("searchInput").value.toUpperCase();
+const filteredProjects = allProjectsData.filter(project => project.projectName.toUpperCase().includes(query));
+displayProjects(filteredProjects);
+}
+
 async function fetchProjects() {
     const projectsData = document.getElementById('projectsData');
     const noProjectsMessage = document.getElementById('noProjectsMessage')
@@ -163,14 +175,26 @@ async function fetchProjects() {
     try {
         const response = await fetch(apiEndpoint);
         const projects = await response.json();
-        let htmlData = "";
-        if (projects.length === 0) {
-            noProjectsMessage.style.display = 'block';
-            hideLoading()
-        } else {
-            noProjectsMessage.style.display = 'none';
-            projects.forEach((project) => {
-                htmlData += `
+        allProjectsData = projects;
+        displayProjects(allProjectsData)
+    } catch (error) {
+        console.log(error);
+    }
+    hideLoading()
+}
+
+function displayProjects(projects) {
+    const projectsData = document.getElementById('projectsData');
+    let htmlData = "";
+    projectsData.innerHTML = "";
+
+    
+    if (projects.length === 0) {
+        document.getElementById('noProjectsMessage').style.display = 'block';
+    } else {
+        document.getElementById('noProjectsMessage').style.display = 'none';
+        projects.forEach((project) => {
+            htmlData += `
                <div class="col-12 col-md-6 col-lg-3" id="project-${project.id}">
                    <div class="project-section shadow p-3 mb-3">
                        <img src="${project.projectImg}" alt="${project.id}" class="project-image w-100" />
@@ -185,12 +209,12 @@ async function fetchProjects() {
                                </svg>
                            </a>
                            <div class="edit-button" onclick="editRecord(${project.id})">
-                               <a href="javascript:void(0)" >
+                               <a href="javascript:void(0)">
                                    <i class="fa fa-edit" style="color:greenyellow"></i>
                                </a>
                            </div>
                            <div class="delete-button" onclick="deleteRecord(${project.id})">
-                               <a href="javascript:void(0)" >
+                               <a href="javascript:void(0)">
                                    <i class="fa fa-trash" style="color:#ff4533"></i>
                                </a>
                            </div>
@@ -198,13 +222,9 @@ async function fetchProjects() {
                    </div>
                </div>
                `;
-            });
-            projectsData.innerHTML = htmlData;
-        }
-    } catch (error) {
-        console.log(error);
+        });
+        projectsData.innerHTML = htmlData;
     }
-    hideLoading()
 }
 
 
@@ -314,15 +334,14 @@ function deleteRecord(id) {
 
 function showFormLoader() {
     const loader = document.getElementById("formLoader");
-    loader.style.display = "block"; // Shows the loader
-    loader.classList.add('spinner'); // Adds the spinner class for the loader animation
+    loader.style.display = "block"; 
+    loader.classList.add('spinner'); 
 }
 
-// Function to hide the loading message
 function hideFormLoader() {
     const loader = document.getElementById("formLoader");
-    loader.style.display = "none"; // Hides the loader
-    loader.classList.remove('spinner'); // Removes the spinner class to stop animation
+    loader.style.display = "none"; 
+    loader.classList.remove('spinner'); 
 }
 
 function getFormData() {

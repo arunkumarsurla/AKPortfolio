@@ -1282,3 +1282,15 @@ a {
     .modal-content {
         background-color: #18181b;
     }
+
+
+.searchInputBox {
+    padding: 24px;
+    font-size: 14px;
+    color: #FFFFFF;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    outline: none;
+    background-color: transparent;
+    font-weight: 600;
+}
