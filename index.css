@@ -845,8 +845,8 @@ h6 {
     line-height: 1;
     text-decoration: none;
     transition: all linear 0.2s;
-    margin-top: 50px;
-    margin-right: 50px;
+    margin:25px;
+
 }
 
 .big-heading {
