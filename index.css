@@ -153,10 +153,6 @@ body {
 aboutsection
 =--------------- */
 
-.about-section {
-    background-color: #000000;
-    width: 100%;
-}
 
 .about-section-img {
     width: 270px;
@@ -508,8 +504,8 @@ Portfolio
 }
 
 .project-logo {
-    width: 40px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 .project-logo-react {
@@ -521,9 +517,6 @@ Portfolio
 Contact
 ---------------------- */
 
-.contact-section {
-    background-color: #000000;
-}
 
 .contact-section .infor {
     width: 100%;
@@ -1038,6 +1031,7 @@ a {
     bottom: 0%;
     left: 0%;
     right: 0%;
+    z-index: -1;
 }
 
 .vertical-line-wrapper {
@@ -1232,6 +1226,7 @@ a {
         padding: 20px;
         font-size: 18px;
         color: #ff0000;
+        text-align: center;
     }
 
     .default-button {

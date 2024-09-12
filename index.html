@@ -30,6 +30,13 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./index.css">
 </head>
+<style>
+
+button:disabled {
+    opacity: 0;
+}
+
+</style>
 
 <body style="height: 100%;">
     <div class="custom-cursor"></div>
@@ -305,43 +312,36 @@
     </section>
 
 
+    
+
     <section class="portfolio-section pt-5 pb-5 w-100" id="portfolioSection">
         <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color">03. </span>Some Things I’ve
-                    Built</h2>
-                <p class="description1">Here you can find My Projects that represent my Expertise.</p>
-            </div>
+        <div class="section-title" data-aos="fade-up">
+            <h2 class="section-heading mt-5 d-flex"><span class="custom-font-color">03. </span>Some Things I’ve
+                Built</h2>
+            <p class="description1">Here you can find My Projects that represent my Expertise.</p>
+        </div>
+            
             <marquee scrollamount="15">
                 <p style="color:#ff4533"><b>Oops..! This section is temporarily unavailable or offline for updates,
                         maintenance, or repairs</b></p>
             </marquee>
-
-
-
-            <div class="row" id="projectsData">
-                <div class="spinner" id="loading">
-                <!-- <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="shadow p-3 mb-3">
-                        <img src="./assests/foodmunchpage.png" class="project-image w-100" />
-                        <h1 class="project-title">Food Munch Page</h1>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="project-link" target="_blank">
-                                View Project
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short"
-                                    fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                            <img src="./assests/javascript-logo.png" class="project-logo" alt="">
-                        </div>
-                    </div>
-                </div> -->
+            <div class="spinner" id="loading" style="display: none;"></div>
+            <div class="no-projects-message" id="noProjectsMessage" style="display: none;">
+                There are no projects at the moment.
             </div>
-          </div>
+            <div class="row" id="projectsData"></div>
+            
+                <div class="d-flex justify-content-between align-items-center" id="paginationContainer" style="display: none !important;">
+                    <button onclick="changePage('prev')" id="prev-button" type="button" class="default-button" disabled><i class="fa-solid fa-arrow-left" style="color:#ff4533"></i> Prev</button> 
+                    <p id="page-numbers"></p> 
+                    <button onclick="changePage('next')" id="next-button" type="button" class="default-button">Next <i class="fa-solid fa-arrow-right"  style="color:#ff4533"></i></button>
+                </div>
+            
         </div>
     </section>
+
+
 
     <section class=" contact-section pt-5 pb-5 w-100" id="contactSection">
         <div class="shadow container" data-aos="fade-up" data-aos-delay="100">
@@ -447,6 +447,8 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
+    <script src="./api.js"></script>
+
     </div>
 </body>
 

@@ -147,8 +147,7 @@
 
 
     <script>
-
-let currentPage = 1;
+        let currentPage = 1;
 const itemsPerPage = 8;
 let totalPages = 1;
 
@@ -184,7 +183,6 @@ function searchProjects() {
 
 async function fetchProjects() {
     const projectsData = document.getElementById('projectsData');
-    const noProjectsMessage = document.getElementById('noProjectsMessage');
     showLoading();
     try {
         const response = await fetch(apiEndpoint);
@@ -411,7 +409,6 @@ function displayResponse(message, status) {
         $('#popUpModal').modal('hide');
     }, 1500);
 }
-
     </script>
 </body>
 </html>
