@@ -30,6 +30,13 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./index.css">
 </head>
+<style>
+
+    button:disabled{
+        display: none;
+    }
+
+</style>
 <body>
     <section class="portfolio-section pt-5 pb-5 w-100" id="manageDataSection">
         <div class="container">
@@ -43,7 +50,7 @@
         
             <div class="d-flex justify-content-between">
                 
-                <input type="text" id="searchInput" class="form-control w-50 searchInputBox" placeholder="Search by project name" onkeyup="searchProjects()">
+                <input type="text" id="searchInput" class="form-control w-50 searchInputBox" placeholder="Search all projects by name" onkeyup="searchProjects()">
                 <button onclick="addProject()" type="button" class="default-button" >
                     Add Project <i style="color:#ff4533" class="fa-solid fa-plus"></i>
                 </button>
@@ -57,6 +64,13 @@
                 There are no projects at the moment.
             </div>
             <div class="row" id="projectsData"></div>
+            
+                <div class="d-flex justify-content-between align-items-center" id="paginationContainer" style="display: none !important">
+                    <button onclick="changePage('prev')" id="prev-button" type="button" class="default-button" disabled>Prev</button> 
+                    <p id="page-numbers"></p> 
+                    <button onclick="changePage('next')" id="next-button" type="button" class="default-button">Next</button>
+                </div>
+            
         </div>
     </section>
   
@@ -133,10 +147,16 @@
 
 
     <script>
-         const apiEndpoint = 'https://668d0469099db4c579f16037.mockapi.io/api/data/projectData';
 
-         let allProjectsData = [];
+let currentPage = 1;
+const itemsPerPage = 8;
+let totalPages = 1;
 
+const prevBtn = document.getElementById('prev-button');
+const nextBtn = document.getElementById('next-button');
+const pageNumbers = document.getElementById('page-numbers');
+const apiEndpoint = 'https://668d0469099db4c579f16037.mockapi.io/api/data/projectData';
+let allProjectsData = [];
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchProjects();
@@ -145,95 +165,113 @@ document.addEventListener('DOMContentLoaded', () => {
         const projectId = document.getElementById("projectid").value;
         const formData = getFormData();
 
-
         if (projectId) {
-            // Update existing project
             updateProjectData(projectId, formData);
-
         } else {
-            // Add new project
             insertProjectData(formData);
-
         }
         $("#projectsModal").modal('hide');
-
     });
 });
 
+function searchProjects() {
+    const query = document.getElementById("searchInput").value.toUpperCase();
+    const filteredProjects = allProjectsData.filter(project => project.projectName.toUpperCase().includes(query));
+    displayProjects(filteredProjects);
+    document.getElementById('noProjectsMessage').innerHTML = "No projects found matching the search criteria."
 
-
-function searchProjects(){
-const query = document.getElementById("searchInput").value.toUpperCase();
-const filteredProjects = allProjectsData.filter(project => project.projectName.toUpperCase().includes(query));
-displayProjects(filteredProjects);
 }
 
 async function fetchProjects() {
     const projectsData = document.getElementById('projectsData');
-    const noProjectsMessage = document.getElementById('noProjectsMessage')
+    const noProjectsMessage = document.getElementById('noProjectsMessage');
     showLoading();
     try {
         const response = await fetch(apiEndpoint);
         const projects = await response.json();
         allProjectsData = projects;
-        displayProjects(allProjectsData)
+        totalPages = Math.ceil(allProjectsData.length / itemsPerPage);
+        updatePagination();
+        displayProjects(getCurrentPageProjects());
     } catch (error) {
         console.log(error);
     }
-    hideLoading()
+    hideLoading();
+}
+
+function getCurrentPageProjects() {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    console.log("startIndex: ", startIndex )
+    const endIndex = startIndex + itemsPerPage;
+    console.log("endIndex: ", endIndex )
+
+    const currentPageProjects = allProjectsData.slice(startIndex, endIndex);
+    return currentPageProjects;
 }
 
 function displayProjects(projects) {
     const projectsData = document.getElementById('projectsData');
     let htmlData = "";
     projectsData.innerHTML = "";
-
-    
     if (projects.length === 0) {
-        document.getElementById('noProjectsMessage').style.display = 'block';
+        document.getElementById('noProjectsMessage').style.display = 'block';    
+    
     } else {
         document.getElementById('noProjectsMessage').style.display = 'none';
+        document.getElementById('paginationContainer').style.display = 'block';
+
         projects.forEach((project) => {
             htmlData += `
-               <div class="col-12 col-md-6 col-lg-3" id="project-${project.id}">
-                   <div class="project-section shadow p-3 mb-3">
-                       <img src="${project.projectImg}" alt="${project.id}" class="project-image w-100" />
-                       <h1 class="project-title">${project.projectName}</h1>
-                       <div class="d-flex justify-content-between">
-                           <a href="${project.projectUrl}" class="project-link" target="_blank">
-                               View Project
-                               <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short"
-                                   fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
-                                   <path fill-rule="evenodd"
-                                       d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                               </svg>
-                           </a>
-                           <div class="edit-button" onclick="editRecord(${project.id})">
-                               <a href="javascript:void(0)">
-                                   <i class="fa fa-edit" style="color:greenyellow"></i>
-                               </a>
-                           </div>
-                           <div class="delete-button" onclick="deleteRecord(${project.id})">
-                               <a href="javascript:void(0)">
-                                   <i class="fa fa-trash" style="color:#ff4533"></i>
-                               </a>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               `;
+                <div class="col-12 col-md-6 col-lg-3" id="project-${project.id}">
+                    <div class="project-section shadow p-3 mb-3">
+                        <img src="${project.projectImg}" alt="${project.id}" class="project-image w-100" />
+                        <h1 class="project-title">${project.projectName}</h1>
+                        <div class="d-flex justify-content-between">
+                            <a href="${project.projectUrl}" class="project-link" target="_blank">
+                                View Project
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#ff4533" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                </svg>
+                            </a>
+                            <div class="edit-button" onclick="editRecord(${project.id})">
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-edit" style="color:greenyellow"></i>
+                                </a>
+                            </div>
+                            <div class="delete-button" onclick="deleteRecord(${project.id})">
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-trash" style="color:#ff4533"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
         });
         projectsData.innerHTML = htmlData;
     }
 }
 
+function changePage(direction) {
+    if (direction === 'prev' && currentPage > 1) {
+        currentPage--;
+    } else if (direction === 'next' && currentPage < totalPages) {
+        currentPage++;
+    }
+    updatePagination();
+    displayProjects(getCurrentPageProjects());
+}
 
+function updatePagination() {
+    pageNumbers.innerHTML = `Page ${currentPage} of ${totalPages}`;
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
+}
 
-function addProject(){
+function addProject() {
     document.getElementById("projectsForm").reset();
     $("#projectsModal").modal('show');
 }
-
 
 async function insertProjectData(formData) {
     showFormLoader();
@@ -253,7 +291,6 @@ async function insertProjectData(formData) {
         fetchProjects();
         displayResponse("Project created successfully!", "success");
 
-
     } catch (error) {
         console.error("Error:", error);
         displayResponse("Error creating project.", "error");
@@ -261,7 +298,6 @@ async function insertProjectData(formData) {
         hideFormLoader();
     }
 }
-
 
 function editRecord(id) {
     $("#projectsModal").modal('show');
@@ -279,7 +315,6 @@ function editRecord(id) {
         })
         .catch(error => console.error('Error fetching project data:', error));
 }
-
 
 async function updateProjectData(id, formData) {
     showFormLoader();
@@ -330,18 +365,16 @@ function deleteRecord(id) {
     }
 }
 
-
-
 function showFormLoader() {
     const loader = document.getElementById("formLoader");
-    loader.style.display = "block"; 
-    loader.classList.add('spinner'); 
+    loader.style.display = "block";
+    loader.classList.add('spinner');
 }
 
 function hideFormLoader() {
     const loader = document.getElementById("formLoader");
-    loader.style.display = "none"; 
-    loader.classList.remove('spinner'); 
+    loader.style.display = "none";
+    loader.classList.remove('spinner');
 }
 
 function getFormData() {
@@ -362,8 +395,6 @@ function hideLoading() {
     document.getElementById("loading").style.display = "none";
 }
 
-
-       
 function displayResponse(message, status) {
     const spanElement = document.getElementById("span");
     const modalBody = document.querySelector("#popUpModal .modal-body");
@@ -383,9 +414,4 @@ function displayResponse(message, status) {
 
     </script>
 </body>
-
-
-
-
-
 </html>
