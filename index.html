@@ -322,17 +322,17 @@ button:disabled {
             <p class="description1">Here you can find My Projects that represent my Expertise.</p>
         </div>
             
-            <marquee scrollamount="15">
+            <marquee scrollamount="15" data-aos="fade-up">
                 <p style="color:#ff4533"><b>Oops..! This section is temporarily unavailable or offline for updates,
                         maintenance, or repairs</b></p>
             </marquee>
-            <div class="d-flex justify-content-between align-items-center" id="paginationContainer" style="display: none !important;">
+            <div  data-aos="fade-up" class="d-flex justify-content-between align-items-center" id="paginationContainer" style="display: none !important;">
                 <button onclick="changePage('prev')" id="prev-button" type="button" class="default-button" disabled><i class="fa-solid fa-arrow-left" style="color:#ff4533"></i> Prev</button> 
                 <p id="page-numbers"></p> 
                 <button onclick="changePage('next')" id="next-button" type="button" class="default-button">Next <i class="fa-solid fa-arrow-right"  style="color:#ff4533"></i></button>
             </div>
             <div class="spinner" id="loading" style="display: none;"></div>
-            <div class="no-projects-message" id="noProjectsMessage" style="display: none;">
+            <div data-aos="fade-up" class="no-projects-message" id="noProjectsMessage" style="display: none;">
                 There are no projects at the moment.
             </div>
             <div class="row" id="projectsData"></div>
