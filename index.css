@@ -1199,5 +1199,15 @@ a {
        transform: rotate(1turn);
     }
  }
-
+.default-button {
+        color: #ff4533;
+        background-color: transparent;
+        border: 2px solid #ff4533;
+        border-radius: 8px;
+        padding: 1rem;
+        font-size: 16px;
+        line-height: 1;
+        text-decoration: none;
+        margin-bottom: 1rem;
+    }
 
