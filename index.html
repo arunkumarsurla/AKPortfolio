@@ -2,48 +2,94 @@
 <html lang="en">
 
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="EKIkdiHbr-jHNJt-Vqoy9kmNPUwRgkPaNhgx4jc0akc" />
-    <meta name="description" content="Software Engineer">
-    <meta property="og:title" content="ArunKumar">
-    <meta property="og:description" content="Software Engineer">
-    <meta property="og:image" content="https://arunkumar.vercel.app/assets/ak_new_logo.ico">
-    <link rel="icon" href="/assets/ak_new_logo.ico" type="image/x-icon">
+    <meta name="google-site-verification" content="EKIkdiHbr-jHNJt-Vqoy9kmNPUwRgkPaNhgx4jc0akc">
 
-    <title>AK's Portfolio</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="ArunKumar - Software Engineer. Building efficient, scalable web applications with a passion for coding and problem-solving.">
+    <meta name="keywords" content="Software Engineer, Web Developer, JavaScript, React, Node.js, Portfolio, ArunKumar">
+    <meta name="author" content="Arun Kumar">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta property="og:title" content="AK's Portfolio | Arun Kumar">
+    <meta property="og:description" content="Explore the work and projects of Arun Kumar, a skilled Software Engineer specializing in web development, building scalable solutions and innovative web applications.">
+    <meta property="og:image" content="https://arunkumar.vercel.app/assets/ak_new_logo.ico">
+    <meta property="og:url" content="https://arunkumar.vercel.app">
+    <meta property="og:type" content="website">
     
-    <!-- Bootstrap CSS -->
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AK's Portfolio | Arun Kumar">
+    <meta name="twitter:description" content="Explore the work and projects of Arun Kumar, a skilled Software Engineer.">
+    <meta name="twitter:image" content="https://arunkumar.vercel.app/assets/ak_new_logo.ico">
+    <meta name="twitter:creator" content="@yourtwitterhandle"> <!-- Add your Twitter handle if applicable -->
+
+    <!-- Title of the page for SEO -->
+    <title>AK's Portfolio | Arun Kumar - Software Engineer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/ak_new_logo.ico" type="image/x-icon">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Bootstrap CSS (Ensure it's the right version for your project) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <!-- AOS library -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- AOS library for scroll animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
+    <!-- jQuery (required for Bootstrap and other interactions) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
-    <!-- Popper.js -->
+
+    <!-- Popper.js (required for Bootstrap tooltips and popovers) -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <!-- AOS library -->
+    <!-- AOS library (Animation on scroll) -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./index.css">
+
+    <!-- Structured Data (Schema.org) for better visibility in search results -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "ArunKumar",
+            "url": "https://arunkumar.vercel.app",
+            "sameAs": [
+                "https://twitter.com/arunkumar-surla",
+                "https://www.linkedin.com/in/arunkumar-surla",
+                "https://github.com/arunkumarsurla"
+            ],
+            "description": "Arun Kumar is a Software Engineer specializing in web development and building scalable, efficient web applications.",
+            "image": "https://arunkumar.vercel.app/assets/ak_new_logo.ico"
+        }
+    </script>
+    
+    <style>
+        /* Custom styles */
+        button:disabled {
+            visibility: hidden;
+        }
+
+        #formbutton-button:focus {
+            outline: 1px dotted #212121;
+            outline: 5px auto -webkit-focus-ring-color;
+        }
+        #formbutton-button::-moz-focus-inner {
+            border: 1px dotted #212121;
+        }
+    </style>
 </head>
-<style>
 
-button:disabled {
-    visibility: hidden;
-}
-
-</style>
 
 <body style="height: 100%;">
     <div class="custom-cursor"></div>
