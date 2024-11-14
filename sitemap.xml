@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+    <!-- Home Page -->
+    <url>
+        <loc>https://arunkumar.vercel.app/</loc>
+        <lastmod>2024-11-14</lastmod>
+        <priority>1.00</priority>
+    </url>
+
+    <!-- About Page -->
+    <url>
+        <loc>https://arunkumar.vercel.app/#aboutSection</loc>
+        <lastmod>2024-11-14</lastmod>
+        <priority>0.80</priority>
+    </url>
+     <!-- Resume Section -->
+    <url>
+        <loc>https://arunkumar.vercel.app/#resumeSection</loc>
+        <lastmod>2024-11-14</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- Projects Page -->
+    <url>
+        <loc>https://arunkumar.vercel.app/#portfolioSection</loc>
+        <lastmod>2024-11-14</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- Contact Page -->
+    <url>
+        <loc>https://arunkumar.vercel.app/#contactSection</loc>
+        <lastmod>2024-11-14</lastmod>
+        <priority>0.60</priority>
+    </url>
+
+   
+</urlset>
