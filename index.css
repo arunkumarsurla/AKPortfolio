@@ -11,13 +11,12 @@ body {
     min-height: 100%;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
-    background-color: #000000;
+    /* background:conic-gradient(from 90deg at 2px 2px,#000000 90deg,#1a1a1a 0) 0 0/30px 30px; */
+    background: repeating-conic-gradient(#1A1A1A 0% 25%, #000000 0% 50%) 50% / 100px 100px;
     color: #FFFFFF;
     font-family: 'Poppins';
     font-size: 18px;
     line-height: 1.3;
-
-
 }
 
 .ak_logo_img {
@@ -34,7 +33,6 @@ body {
 }
 
 .custom-navbar {
-    background-color: #000000;
     justify-content: space-between;
     font-size: 15px;
 }
@@ -702,7 +700,7 @@ footer
 
 
 .footer {
-    background-color: #000000;
+    background-color: transparent;
 }
 
 .description {
@@ -1025,54 +1023,6 @@ a {
     right: 0%;
 }
 
-.vertical-line-global {
-    position: fixed;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-    z-index: -1;
-}
-
-.vertical-line-wrapper {
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-    max-width: 85rem;
-    justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-}
-
-.bg-line-line-global {
-    width: 2px;
-    height: 100%;
-    background-color: #1a1a1a;
-    position: absolute;
-    z-index: 1;
-}
-
-.bg-line-line-global.is-first {
-    left: 0%;
-}
-
-.bg-line-line-global.is-second {
-    left: 25%;
-}
-
-.bg-line-line-global.is-third {
-    left: 50%;
-    z-index: -1;
-}
-
-.bg-line-line-global.is-fourth {
-    left: 75%;
-}
-
-.bg-line-line-global.is-fifth {
-    left: 100%;
-}
 
 .vertical-line.is-1 {
     height: 10rem;
