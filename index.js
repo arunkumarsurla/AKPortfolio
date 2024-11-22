@@ -146,3 +146,27 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+
+
+
+
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+  const cnavbar = document.querySelector(".custom-navbar");
+
+  const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+  if (currentScrollTop > lastScrollTop) {
+    // Scrolling down
+    navbar.classList.remove("show");
+    navbar.classList.add("hide");
+  } else if (currentScrollTop < lastScrollTop) {
+    // Scrolling up
+    navbar.classList.remove("hide");
+    navbar.classList.add("show");
+  }
+
+  lastScrollTop = Math.max(currentScrollTop, 0);
+});

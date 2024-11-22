@@ -35,8 +35,15 @@ body {
 .custom-navbar {
     justify-content: space-between;
     font-size: 15px;
+    transition: all linear 0.3s;
 }
+.hide {
+    transform: translateY(-100%);
 
+}
+.show {
+    transform: translateY(0);
+}
 #navItem1,
 #navItem2,
 #navItem3,
