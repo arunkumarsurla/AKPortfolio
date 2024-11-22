@@ -108,6 +108,9 @@ body {
     .custom-navbar {
         backdrop-filter: blur(10px);
     }
+    .custom-cursor{
+        display: none;
+    }
     #navItem1,
     #navItem2,
     #navItem3,
@@ -115,6 +118,9 @@ body {
     #navItem5,
     #navItem6 {
         text-align: center;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 50px;
     }
 
     .Home-section {
@@ -793,6 +799,7 @@ li {
     text-decoration: none;
     /* margin-left: 15px; */
     font-size: 15px;
+    text-align: center;
 }
 
 .template-section {
