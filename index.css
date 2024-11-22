@@ -98,7 +98,9 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-
+    .custom-navbar {
+        backdrop-filter: blur(10px);
+    }
     #navItem1,
     #navItem2,
     #navItem3,
