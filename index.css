@@ -104,7 +104,24 @@ body {
     border-radius: 8px;
 }
 
+
+.mobile-social-list {
+    display: none; 
+}
+
 @media only screen and (max-width: 768px) {
+
+    .mobile-social-list {
+        list-style: none; 
+        padding: 0; 
+        margin: 10px; 
+        display: flex; 
+        gap: 20px; 
+        align-items: center;
+        justify-content: center;
+    }
+
+
     .custom-navbar {
         backdrop-filter: blur(10px);
     }
@@ -1232,3 +1249,4 @@ a {
 .navbar-toggler span:nth-child(3) {
     transform: translate(0%, 0%) rotate(0deg) ;
 }
+
