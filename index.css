@@ -110,6 +110,9 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+    .skeleton-loader{
+        display: none !important;
+    }
 
     .mobile-social-list {
         list-style: none; 
@@ -1250,3 +1253,72 @@ a {
     transform: translate(0%, 0%) rotate(0deg) ;
 }
 
+  
+
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Background color for loader */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background: repeating-conic-gradient(#1A1A1A 0% 25%, #000000 0% 50%) 50% / 100px 100px;
+    flex-direction: column;
+  }
+
+.skeleton-loader .skeleton {
+    background: linear-gradient(
+        90deg,
+        rgba(55, 55, 55, 0.6) 25%, /* Dark gray for subtle contrast */
+        rgba(85, 85, 85, 0.8) 50%, /* Lighter gray for highlight */
+        rgba(55, 55, 55, 0.6) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite ease-in-out;
+}
+
+.skeleton-logo {
+    width: 70px;
+    height: 70px;
+    border-radius:50%;
+    animation: shimmer 1.5s infinite ease-in-out;
+}
+
+.skeleton-navitem {
+    width: 100px;
+    height: 40px;
+    animation: shimmer 1.5s infinite ease-in-out;
+    margin: 10px;
+    border-radius: 8px;
+}
+.skeleton-social-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    left: 40px;
+    padding:10px;
+    margin:10px;
+    animation: shimmer 1.5s infinite ease-in-out;
+}
+.skeleton-social-media-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+@keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
