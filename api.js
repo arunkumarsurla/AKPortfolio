@@ -12,7 +12,7 @@ let allProjectsData = [];
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchProjects();
-    fetchSkillsData();
+    //fetchSkillsData();
 });
 
 
@@ -104,34 +104,27 @@ function hideLoading() {
     document.getElementById("loading").style.display = "none";
 }
 
-const fetchSkillsData = async () =>{
-    showLoading();
-    const skillsResponse  = await fetch('./skills.json');
-    const jsonSkillsData =  await skillsResponse.json();
-    console.log(jsonSkillsData)
-    displaySkillsData(jsonSkillsData);
-  }
+// const fetchSkillsData = async () =>{
+//     showLoading();
+//     const skillsResponse  = await fetch('./skills.json');
+//     const jsonSkillsData =  await skillsResponse.json();
+//     console.log(jsonSkillsData)
+//     displaySkillsData(jsonSkillsData);
+//   }
   
-  fetchSkillsData();
+//   fetchSkillsData();
   
-  function displaySkillsData(skillsData) {
-    const skillsDataDiv = document.getElementById("skillDataContainer");
+//   function displaySkillsData(skillsData) {
+//     const skillsDataDiv = document.getElementById("skillDataContainer");
   
-    let htmlString = "";
+//     let htmlString = "";
   
-    skillsData.forEach((skills) => {
-      htmlString += `
-        <div class="skill-bar mt-2">
-            <div class="info">
-            <i class="${skills.icon}"></i>
-                <p>${skills.name}</p>
-                <P>${skills.percentage}</P>
-            </div>
-            <div class="bar">
-                <span class="${skills.className}"></span>
-            </div>
-        </div>
-  `;
-    });
-    skillsDataDiv.innerHTML = htmlString;
-  }
+//     skillsData.forEach((skills) => {
+//       htmlString += `
+//         <div class="skills">
+//             <div class="skills-skill"> <i class="${skills.icon}"></i> ${skills.name}</div>
+//         </div>
+//   `;
+//     });
+//     skillsDataDiv.innerHTML = htmlString;
+//   }

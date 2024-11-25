@@ -294,6 +294,7 @@ Resume
     font-weight: 600;
     margin-bottom: 10px;
     font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    border-left: #ff4533 2px solid;
 
 }
 
@@ -320,10 +321,6 @@ Resume
     border: 2px solid #ff4533;
 }
 
-.skill_bar {
-    margin-top: 5px;
-    padding: 10px;
-}
 
 
 .info {
@@ -332,173 +329,6 @@ Resume
     align-items: center;
     padding: 0 10px;
     font-weight: 600;
-}
-
-.bar {
-    width: 100%;
-    height: 10px;
-    background-color: #313131;
-    border-radius: 25px;
-    margin-top: 5px;
-    position: relative;
-}
-
-.bar span {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    background-color: #c8c8c8;
-    border-radius: 25px;
-}
-
-.bar .html {
-    width: 90%;
-    animation: html 2s;
-}
-
-@keyframes html {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 90%;
-    }
-}
-
-.bar .css {
-    width: 90%;
-    animation: css 2s;
-}
-
-@keyframes css {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 90%;
-    }
-}
-
-.bar .bootstrap {
-    width: 80%;
-    animation: bootstrap 2s;
-}
-
-@keyframes bootstrap {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 80%;
-    }
-}
-
-.bar .js {
-    width: 80%;
-    animation: js 2s;
-}
-
-@keyframes js {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 80%;
-    }
-}
-
-.bar .react {
-    width: 70%;
-    animation: react 2s;
-}
-
-@keyframes react {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 70%;
-    }
-}
-
-.bar .node {
-    width: 60%;
-    animation: node 2s;
-}
-
-@keyframes node {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 60%;
-    }
-}
-
-.bar .express {
-    width: 55%;
-    animation: express 2s;
-}
-
-@keyframes express {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 55%;
-    }
-}
-
-.bar .php {
-    width: 65%;
-    animation: php 2s;
-}
-
-@keyframes php {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 65%;
-    }
-}
-
-.bar .sql {
-    width: 80%;
-    animation: sql 2s;
-}
-
-@keyframes sql {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 75%;
-    }
-}
-
-.bar .python {
-    width: 65%;
-    animation: python 2s;
-}
-
-@keyframes python {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 65%;
-    }
 }
 
 /* ---------------------
@@ -1321,4 +1151,20 @@ a {
       background-position: -200% 0;
     }
   }
-  
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-skill {
+    padding: 1rem;
+    margin: 9px;
+    background: #18181b;
+    border-radius: 9px;
+    color: #ffffff;
+    border-right: #ff4533 2px solid;
+}
+.skills-skill:hover {
+    background-color: #ff4533;
+}
