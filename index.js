@@ -174,6 +174,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
+  const year = document.getElementById("year").textContent = new Date().getFullYear();
 
   preloader.style.display = "none"; 
 });
