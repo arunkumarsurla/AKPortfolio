@@ -1,11 +1,12 @@
 let currentPage = 1;
-const itemsPerPage = 8;
+const itemsPerPage = 4;
 let totalPages = 1;
+let dataAos = "fade-up";
 
 const prevBtn = document.getElementById('prev-button');
 const nextBtn = document.getElementById('next-button');
 const pageNumbers = document.getElementById('page-numbers');
-// const jsonPath = 'https://668d0469099db4c579f16037.mockapi.io/api/data/projectData';
+// const jsonPath = '';
 const jsonPath = './projectsData.json'
 
 let allProjectsData = [];
@@ -55,7 +56,7 @@ function displayProjects(projects) {
 
         projects.forEach((project) => {
             htmlData += `
-         <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+         <div class="col-12 col-md-6 col-lg-3" data-aos="${dataAos}" data-aos-delay="100">
     <div class="project-section shadow p-3 mb-3">
         <img src="${project.projectImg}" alt="${project.projectName}" class="project-image w-100" />
         <h1 class="project-title">${project.projectName}</h1>
@@ -81,8 +82,11 @@ function displayProjects(projects) {
 function changePage(direction) {
     if (direction === 'prev' && currentPage > 1) {
         currentPage--;
+        dataAos = "fade-right";
+
     } else if (direction === 'next' && currentPage < totalPages) {
         currentPage++;
+        dataAos = "fade-left";
     }
     updatePagination();
     displayProjects(getCurrentPageProjects());
