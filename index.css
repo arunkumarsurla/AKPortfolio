@@ -374,7 +374,10 @@ Portfolio
 
 .project-section {
     border-radius: 16px;
-    background-color: #18181b;
+ background: rgba(255, 255, 255, 0.06); /* Transparent glass look */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .project-logo {
@@ -395,8 +398,12 @@ Contact
 .contact-section .infor {
     width: 100%;
     padding: 50px;
-    background-color: #18181b;
-    box-sizing: border-box;
+ background: rgba(255, 255, 255, 0.06); /* Transparent glass look */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      box-sizing: border-box;
     border-radius: 16px;
 }
 
@@ -449,8 +456,10 @@ Contact
 .box {
     width: 100%;
     padding: 40px;
-    background-color: #18181b;
-    box-sizing: border-box;
+ background: rgba(255, 255, 255, 0.06); /* Transparent glass look */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
 }
 
@@ -1001,10 +1010,10 @@ a {
  }
 .default-button {
         color: #ff4533;
-        background-color: transparent;
+       background: transparent;
         border: 2px solid #ff4533;
         border-radius: 8px;
-        padding: 1rem;
+        padding: 14px;
         font-size: 16px;
         line-height: 1;
         text-decoration: none;
@@ -1144,7 +1153,9 @@ a {
 .skills-skill {
     padding: 1rem;
     margin: 9px;
-    background: #18181b;
+     background: rgba(255, 255, 255, 0.06); /* Transparent glass look */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
     border-radius: 9px;
     color: #ffffff;
     border-right: #ff4533 2px solid;
