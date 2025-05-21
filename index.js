@@ -1,27 +1,23 @@
 const sections = document.querySelectorAll("section");
-const nava = document.querySelectorAll("nav .collapse div a");
+const navLinks = document.querySelectorAll("nav .collapse div a");
+
 window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach((section) => {
+  let currentId = "";
+
+  sections.forEach(section => {
     const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (scrollY >= sectionTop - sectionHeight / 3) {
-      // console.log(scrollY)
-      current = section.getAttribute("id");
+    const sectionHeight = section.offsetHeight;
+    if (window.scrollY >= sectionTop - sectionHeight / 3) {
+      currentId = section.id;
     }
   });
 
-  nava.forEach((a) => {
-    a.classList.remove("active");
-    if (a.classList.contains(current)) {
-      a.classList.add("active");
-    }
+  navLinks.forEach(link => {
+    link.classList.toggle("active", link.classList.contains(currentId));
   });
 });
 
-// ------------
-// Form
-// ------------
+
 
 const form = document.getElementById("myForm");
 const fullname = document.getElementById("fullname");
@@ -128,16 +124,6 @@ form.addEventListener("submit", (e) => {
 
 inputs.forEach((input) => input.addEventListener("input", validate));
 
-document.addEventListener("mousemove", (e) => {
-  const cursor = document.querySelector(".custom-cursor");
-  cursor.style.left = `${e.pageX}px`; // Adjust the x position
-  cursor.style.top = `${e.pageY}px`; // Adjust the y position
-});
-
-window.onscroll = function () {
-  myFunction();
-};
-
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height =
@@ -146,31 +132,6 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
-
-
-
-
-let lastScrollTop = 0;
-
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar");
-  const cnavbar = document.querySelector(".custom-navbar");
-
-  const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
-
-  if (currentScrollTop > lastScrollTop) {
-    // Scrolling down
-    navbar.classList.remove("show");
-    navbar.classList.add("hide");
-  } else if (currentScrollTop < lastScrollTop) {
-    // Scrolling up
-    navbar.classList.remove("hide");
-    navbar.classList.add("show");
-  }
-
-  lastScrollTop = Math.max(currentScrollTop, 0);
-});
-
 
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");

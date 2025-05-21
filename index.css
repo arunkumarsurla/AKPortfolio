@@ -20,7 +20,7 @@ body {
 }
 
 .ak_logo_img {
-    width: 4rem;
+    width: 50px;
     transition: all linear 0.5s;
     border-radius: 50%;
     filter: hue-rotate(160deg);
@@ -33,10 +33,26 @@ body {
 }
 
 .custom-navbar {
-    justify-content: space-between;
-    font-size: 15px;
-    transition: all linear 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px; 
+  max-width: 1200px; 
+  margin:auto;
+  margin-top:15px;
+  padding: 0 24px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.06); /* Transparent glass look */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
 }
+
+
+
 .hide {
     transform: translateY(-100%);
 
@@ -126,11 +142,9 @@ body {
 
 
     .custom-navbar {
-        backdrop-filter: blur(10px);
+        height: auto;
     }
-    .custom-cursor{
-        display: none;
-    }
+
     #navItem1,
     #navItem2,
     #navItem3,
@@ -963,33 +977,6 @@ a {
     }
 }
 
-
-.custom-cursor {
-    position: fixed;
-    box-sizing: border-box;
-    transform: translate(-50%, -50%);
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10000;
-    transition: all 400ms ease-out;
-    border: 2px solid #ff4533;
-}
-
-.custom-cursor::after {
-    content: '';
-    position: absolute;
-    width: 0.3rem;
-    box-sizing: border-box;
-    height: 0.3rem;
-    background-color: #ff4533;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transition: all 400ms ease-out;
-    transform: translate(-50%, -50%);
-}
 
 .progress-bar {
     position: fixed;
