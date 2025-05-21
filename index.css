@@ -23,9 +23,6 @@ body {
     width: 50px;
     transition: all linear 0.5s;
     border-radius: 50%;
-    filter: hue-rotate(160deg);
-
-
 }
 
 .span-logo {
@@ -204,7 +201,6 @@ aboutsection
 .about-section-img {
     width: 270px;
     margin-top: 15vh;
-    filter: invert(1);
     border-radius: 50%;
 }
 
