@@ -142,6 +142,7 @@ body {
         height: auto;
         margin-top:0px;
         border-radius:0px;
+        backdrop-filter: blur(10px);
     }
 
     #navItem1,
