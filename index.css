@@ -140,6 +140,8 @@ body {
 
     .custom-navbar {
         height: auto;
+        margin-top:0px;
+        border-radius:0px;
     }
 
     #navItem1,
