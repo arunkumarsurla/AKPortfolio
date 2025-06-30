@@ -82,11 +82,11 @@ function displayProjects(projects) {
 function changePage(direction) {
     if (direction === 'prev' && currentPage > 1) {
         currentPage--;
-        dataAos = "fade-right";
+        dataAos = "fade-up";
 
     } else if (direction === 'next' && currentPage < totalPages) {
         currentPage++;
-        dataAos = "fade-left";
+        dataAos = "fade-up";
     }
     updatePagination();
     displayProjects(getCurrentPageProjects());
